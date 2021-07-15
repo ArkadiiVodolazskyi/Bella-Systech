@@ -1,0 +1,182 @@
+@media (max-width: 1600px)
+	button, .button, input[type="button"], input[type="submit"]
+		padding: 12px 24px
+		font-size: 20px
+	p
+		&.p-3
+			font-size: 20px
+
+	header .top
+		nav ul li a
+			font-size: 18px
+		.languages
+			&::before
+				width: 20px
+				height: 20px
+			> a
+				font-size: 16px
+				padding-left: 28px
+		> button
+			font-size: 20px
+	footer
+		padding: 72px 0
+		.footer_block
+			h5
+				font-size: 24px
+			ul a
+				font-size: 20px
+		.contacts
+			a
+				font-size: 24px
+
+@media (max-width: 1440px)
+	.wrapper
+		width: 90%
+
+	header .top
+		padding-left: 12px
+		.header_contacts .messengers,
+		.header_contacts button,
+		> button > span
+			display: none
+		nav ul li a
+			font-size: 20px
+
+	footer
+		.footer_block
+			padding-right: 36px
+		.other_blocks
+			gap: 36px
+		.contacts
+			a
+				font-size: 22px
+			> ul li:not(:first-child)
+				margin-top: 24px
+			> div
+				margin-top: 36px
+
+@media (max-width: 1280px)
+	p.p-3
+		font-size: 18px
+	button, .button, input[type="button"], input[type="submit"]
+		padding: 12px 18px
+
+	header .top nav ul li a
+		font-size: 18px
+		padding: 18px 10px
+	footer
+		padding: 48px 0
+		.footer_block ul a
+			font-size: 18px
+		.other_blocks
+			gap: 30px
+			> .footer_block
+				padding-right: 0
+				width: calc( 100% / 2 - 18px)
+		.contacts
+			a
+				font-size: 20px
+			> ul li img
+				margin-right: 18px
+			> div
+				button
+					margin-right: 18px
+				.messengers li:not(:first-child)
+					margin-left: 12px
+
+@media (max-width: 1024px)
+	header
+		.top
+			display: none
+		.bottom
+			.wrapper
+				#openCallForm, #openHambMenu
+					display: inline-flex
+			.logo
+				width: 210px
+
+	footer
+		.wrapper
+			grid-template-columns: repeat(2, 50%)
+			grid-template-rows: repeat(3, auto)
+			grid-template-areas: "main contacts" "other other" "copyrgiht development"
+		.other_blocks
+			margin: 24px 0
+			grid-row: unset
+		.footer_block
+			padding-right: 0
+
+@media (max-width: 767px)
+	body
+		padding-top: 110px
+	header
+		height: 110px
+		#signupMobile
+			display: block
+
+	footer .contacts > div
+		flex-direction: column
+		align-items: flex-start
+		button
+			margin-right: 0
+		.messengers
+			margin-top: 18px
+
+@media (max-width: 700px)
+	footer
+		.wrapper
+			grid-template-columns: 100%
+			grid-template-rows: none
+			grid-template-areas: "main" "other" "contacts" "copyrgiht" "development"
+		.other_blocks
+			gap: 24px
+			margin-bottom: 0
+			> .footer_block
+				width: 100%
+		.footer_block
+			ul
+				transition: all 0.2s linear
+				max-height: 0
+				opacity: 0
+				visibility: hidden
+				margin-top: 0
+			&.active ul
+				max-height: 500px
+				opacity: 1
+				visibility: visible
+				margin-top: 18px
+			h5
+				font-size: 20px
+				cursor: pointer
+				transition: all 0.2s linear
+				&:hover
+					color: $aqua
+				img
+					display: inline-flex
+		.contacts
+			margin-top: 48px
+			> div
+				margin-top: 24px
+		.copyright
+			margin-top: 48px
+		.development
+			margin-top: 18px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

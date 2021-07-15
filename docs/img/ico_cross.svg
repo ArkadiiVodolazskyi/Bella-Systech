@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g id="Mask_Group_56" clip-path="url(#clip-path)" transform="translate(-18 -24)">
+        <path id="ic24-menu" d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" class="cls-3" transform="translate(20.181 23.999) rotate(45)"/>
+        <path id="ic24-menu-2" d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" class="cls-3" transform="translate(17.999 45.818) rotate(-45)"/>
+    </g>
+</svg>

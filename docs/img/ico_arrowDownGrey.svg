@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7d8d8d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="ic24-chevron-right" class="cls-1" d="M5.943,3a1.049,1.049,0,0,0-.747.313L.31,8.246a1.073,1.073,0,0,0,0,1.508L5.2,14.687a1.048,1.048,0,0,0,1.494,0,1.073,1.073,0,0,0,0-1.508L2.551,9,6.69,4.821a1.073,1.073,0,0,0,0-1.508A1.049,1.049,0,0,0,5.943,3" transform="translate(-3 7) rotate(-90)"/>
+</svg>

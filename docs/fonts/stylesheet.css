@@ -1,0 +1,84 @@
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Black\ Italic.otf');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Black.otf');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Light.otf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Light\ Italic.otf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Medium.otf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Medium\ Italic.otf');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Bold\ Italic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Black\ Italic.otf');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Black.otf');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mabry Pro';
+	src: url('./Mabry\ Pro\ Italic.otf');
+	font-weight: normal;
+	font-style: italic;
+}
+

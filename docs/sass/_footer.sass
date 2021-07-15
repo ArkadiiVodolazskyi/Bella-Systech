@@ -1,0 +1,90 @@
+footer
+	width: 100%
+	background-color: $dark
+	color: $w
+	padding: 96px 0
+	a:hover
+		color: $aqua
+	.wrapper
+		display: grid
+		grid-template-columns: 22% 45% 33%
+		grid-template-rows: repeat(2, auto)
+		grid-template-areas: "main other contacts" "copyrgiht other development"
+		align-items: flex-start
+	.footer_block
+		padding-right: 70px
+		&.main
+			grid-area: main
+		h5
+			font-weight: 500
+			@include flex
+			img
+				display: none
+				width: 18px
+		ul
+			margin-top: 18px
+			li
+				&:not(:first-child)
+					margin-top: 12px
+			a
+				font-size: 24px
+				font-weight: normal
+				color: $lgrey
+				white-space: pre-wrap
+				&:hover
+					color: $aqua
+	.other_blocks
+		grid-area: other
+		grid-row: span 2
+		display: flex
+		flex-wrap: wrap
+		gap: 48px
+		> .footer_block
+			width: calc( 100% / 2 - 94px )
+	p
+		color: $lgrey
+		margin-top: auto
+		&.copyrgiht
+			grid-area: copyrgiht
+		&.development
+			grid-area: development
+			a
+				font-size: inherit
+	.contacts
+		grid-area: contacts
+		> ul li
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			&:not(:first-child)
+				margin-top: 30px
+			&.phones
+				ul li:not(:first-child)
+					margin-top: 12px
+			&.email
+				align-items: center
+			img
+				margin-top: 6px
+				width: 24px
+				margin-right: 24px
+		a
+			font-size: 30px
+			white-space: unset
+			line-height: 1.2
+		> div
+			@include flex
+			justify-content: flex-start
+			margin-top: 48px
+			button
+				margin-right: 36px
+				background-color: $red
+				&:hover
+					background-color: $aqua
+			.messengers
+				@include flex
+				li:not(:first-child)
+					margin-top: 0
+					margin-left: 24px
+				img
+					width: 36px
+					height: 36px

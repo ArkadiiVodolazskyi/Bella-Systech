@@ -1,0 +1,241 @@
+#overlay
+	position: fixed
+	z-index: 150
+	left: 0
+	top: 110px
+	right: 0
+	bottom: 0
+	width: 100vw
+	height: 100vh
+	background-color: rgba($dark, 0.5)
+	cursor: pointer
+	transition: all 0.2s linear
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+
+header
+	position: fixed
+	z-index: 100
+	height: 145px
+	left: 0
+	top: 0
+	right: 0
+	color: $w
+	a:hover
+		color: $aqua
+	.top
+		@include flex
+		padding-left: 48px
+		background-color: $dark
+		.header_contacts
+			@include flex
+			.messengers
+				@include flex
+				li
+					height: 20px
+					&:not(:first-child)
+						margin-left: 8px
+			.phones
+				@include flex
+				margin-left: 12px
+				&::after
+					content: url('../img/ico_arrowDownGrey.svg')
+					margin-left: 8px
+					width: 12px
+					height: 27px
+				> ul
+					background-color: rgba($dark, 0.95)
+			button
+				margin-left: 18px
+				padding: 0
+				font-size: 16px
+				color: $aqua
+				&:hover
+					color: darken($aqua, 20%)
+		nav ul
+			@include flex
+			li a
+				padding: 20px 15px
+				font-size: 20px
+				line-height: 1.2
+		.languages
+			@include flex
+			position: relative
+			&::before
+				content: url('../img/ico_globus.svg')
+				width: 24px
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+			> a
+				font-size: 18px
+				line-height: 1.22
+				padding-left: 36px
+			> ul
+				width: 30px
+				left: unset
+				right: -14px
+				background-color: rgba($dark, 0.95)
+				li
+					text-align: center
+		> button
+			align-self: stretch
+			font-size: 24px
+			background-color: $red
+			&:hover
+				background-color: $aqua
+	.bottom
+		box-shadow: 0 3px 12px 0 rgba(31, 38, 38, 0.08)
+		background-color: $w
+		padding: 12px 0
+		.wrapper
+			@include flex
+			flex-wrap: wrap
+			#openCallForm
+				display: none
+				justify-content: center
+				align-items: center
+				padding: 0
+				svg
+					width: 24px
+					height: 24px
+					transition: all 0.2s linear
+					fill: $red
+				&:hover svg
+					fill: $aqua
+			#openHambMenu
+				display: none
+				width: 24px
+				height: 24px
+				padding: 0
+				position: relative
+				svg
+					position: absolute
+					z-index: 120
+					left: 50%
+					top: 50%
+					width: 100%
+					height: 100%
+					transform: translate(-50%, -50%)
+					transition: all 0.2s linear
+					fill: $red
+				&:hover svg
+					fill: $aqua
+				.cross
+					opacity: 0
+					visibility: hidden
+				&.active
+					.hamb
+						opacity: 0
+						visibility: hidden
+					.cross
+						opacity: 1
+						visibility: visible
+			.logo
+				max-width: 300px
+				margin: 0 auto
+	#signupMobile
+		display: none
+		background-color: $red
+		width: 100%
+		font-size: 18px
+		border-radius: 0
+		&:hover
+			background-color: $aqua
+
+#mobileMenu
+	position: fixed
+	z-index: 200
+	top: 110px
+	left: 0
+	right: 0
+	background-color: $dark
+	padding: 36px 0
+	color: $w
+	transition: all 0.2s linear
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+	a:hover
+		color: $aqua
+	.header_contacts
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.messengers
+			@include flex
+			li
+				height: 20px
+				&:not(:first-child)
+					margin-left: 8px
+		button
+			width: 100%
+		.phones
+			margin-left: 12px
+			a
+				font-size: 24px
+			&::after
+				content: url('../img/ico_arrowDownGrey.svg')
+				margin-left: 8px
+				width: 12px
+				height: 27px
+			> ul
+				background-color: rgba($dark, 0.95)
+		button
+			margin-top: 12px
+			padding: 0
+			font-size: 16px
+			color: $aqua
+			&:hover
+				color: darken($aqua, 20%)
+	nav
+		margin: 36px 0
+		padding: 36px 0
+		border-top: 1px solid rgba($w, 0.2)
+		border-bottom: 1px solid rgba($w, 0.2)
+		ul
+			text-align: center
+			li
+				display: block
+				&:not(:first-child)
+					margin-top: 24px
+				a
+					font-size: 20px
+					line-height: 1.2
+	.languages
+		@include flex
+		width: max-content
+		margin: 0 auto
+		&::before
+			content: url('../img/ico_globus.svg')
+			width: 24px
+			height: 24px
+		> a
+			font-size: 18px
+			line-height: 1.22
+			margin-left: 18px
+			&.current
+				opacity: 0.3
+				pointer-events: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
