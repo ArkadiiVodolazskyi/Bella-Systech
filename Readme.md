@@ -19,7 +19,7 @@ Wrapper: 1560px (81.25%)
 Wrapper 2 (paragraph sections): 1032px (53.75%)
 
 Pages:
-1. 001 - main
+1. 001 - main (index)
 2. 003 - oborudovanie–inner
 3. 005 - kosmetika
 4. 007 - kosmetika–tovar
