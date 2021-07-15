@@ -43,7 +43,15 @@ p.p-3 { font-size: 24px; line-height: 1.33; }
 
 p.p-4, p.p-5 { font-size: 18px; line-height: 1.33; }
 
-button, .button, input[type=button], input[type=submit] { padding: 18px 36px; padding-border: 2px solid #d02029; border-radius: 6px; font-size: 24px; font-weight: 500; line-height: 1.21; white-space: nowrap; transition: all 0.2s linear; }
+button, .button, input[type=button], input[type=submit] { padding: 18px 36px; border-radius: 6px; font-size: 24px; font-weight: 500; line-height: 1.21; white-space: nowrap; transition: all 0.2s linear; }
+
+button.empty, .button.empty, input[type=button].empty, input[type=submit].empty { border: 2px solid #d02029; color: #1f2626; }
+
+button.empty:hover, .button.empty:hover, input[type=button].empty:hover, input[type=submit].empty:hover { background-color: #d02029; color: #ffffff; }
+
+button.filled, .button.filled, input[type=button].filled, input[type=submit].filled { background-color: #d02029; color: #ffffff; }
+
+button.filled:hover, .button.filled:hover, input[type=button].filled:hover, input[type=submit].filled:hover { background-color: #49bfc6; }
 
 a { white-space: nowrap; text-decoration: none; font-size: 18px; font-weight: 500; line-height: 1.22; transition: all 0.2s linear; }
 
@@ -55,6 +63,10 @@ a { white-space: nowrap; text-decoration: none; font-size: 18px; font-weight: 50
 
 .hover_expand_inner:hover > ul { opacity: 1; visibility: visible; }
 
+.aquaEmpty { position: absolute; border: 20px solid rgba(73, 191, 198, 0.2); background-color: #00000000; }
+
+.pinkFilled { position: absolute; background-color: #f5e5e5; }
+
 html { width: 100vw; overflow-x: hidden; scroll-behavior: unset; position: relative; height: 100%; font-size: 18px; color: #1f2626; }
 
 body { width: 100%; height: 100%; padding-top: 145px; position: relative; z-index: 1; overflow-x: hidden; }
@@ -62,6 +74,8 @@ body { width: 100%; height: 100%; padding-top: 145px; position: relative; z-inde
 body.discroll { position: fixed; overflow: hidden; }
 
 section { position: relative; z-index: 5; width: 100%; }
+
+section button { box-shadow: 0 12px 18px 0 rgba(208, 32, 41, 0.18); }
 
 .wrapper { width: 81.25%; margin: 0 auto; position: relative; z-index: 5; }
 
@@ -111,9 +125,7 @@ header .top .languages > ul { width: 30px; left: unset; right: -14px; background
 
 header .top .languages > ul li { text-align: center; }
 
-header .top > button { align-self: stretch; font-size: 24px; background-color: #d02029; }
-
-header .top > button:hover { background-color: #49bfc6; }
+header .top > button { align-self: stretch; font-size: 24px; }
 
 header .bottom { box-shadow: 0 3px 12px 0 rgba(31, 38, 38, 0.08); background-color: #ffffff; padding: 12px 0; }
 
@@ -139,9 +151,7 @@ header .bottom .wrapper #openHambMenu.active .cross { opacity: 1; visibility: vi
 
 header .bottom .wrapper .logo { max-width: 300px; margin: 0 auto; }
 
-header #signupMobile { display: none; background-color: #d02029; width: 100%; font-size: 18px; border-radius: 0; }
-
-header #signupMobile:hover { background-color: #49bfc6; }
+header #signupMobile { display: none; width: 100%; font-size: 18px; border-radius: 0; }
 
 #mobileMenu { position: fixed; z-index: 200; top: 110px; left: 0; right: 0; background-color: #1f2626; padding: 36px 0; color: #ffffff; transition: all 0.2s linear; opacity: 0; visibility: hidden; }
 
@@ -188,6 +198,22 @@ header #signupMobile:hover { background-color: #49bfc6; }
 #mobileMenu .languages > a { font-size: 18px; line-height: 1.22; margin-left: 18px; }
 
 #mobileMenu .languages > a.current { opacity: 0.3; pointer-events: none; }
+
+section.homeBanner .wrapper { display: flex; justify-content: space-between; align-items: center; }
+
+section.homeBanner .wrapper .text { width: 45%; position: relative; z-index: 5; }
+
+section.homeBanner .wrapper .text p { margin-top: 24px; }
+
+section.homeBanner .wrapper .text .button { margin-top: 48px; }
+
+section.homeBanner .wrapper .image { width: 55%; position: relative; }
+
+section.homeBanner .wrapper .image .aquaEmpty { z-index: 1; width: 90%; padding-bottom: 27vw; top: 50%; left: 0; transform: translate(0, -50%); }
+
+section.homeBanner .wrapper .image .pinkFilled { z-index: 2; width: 90%; padding-bottom: 25vw; bottom: 0; left: 100px; }
+
+section.homeBanner .wrapper .image img { position: relative; z-index: 3; max-width: 100%; max-height: 100%; margin-top: auto; }
 
 footer { width: 100%; background-color: #1f2626; color: #ffffff; padding: 96px 0; }
 
@@ -239,9 +265,7 @@ footer .contacts a { font-size: 30px; white-space: unset; line-height: 1.2; }
 
 footer .contacts > div { display: flex; justify-content: space-between; align-items: center; justify-content: flex-start; margin-top: 48px; }
 
-footer .contacts > div button { margin-right: 36px; background-color: #d02029; }
-
-footer .contacts > div button:hover { background-color: #49bfc6; }
+footer .contacts > div button { margin-right: 36px; }
 
 footer .contacts > div .messengers { display: flex; justify-content: space-between; align-items: center; }
 
