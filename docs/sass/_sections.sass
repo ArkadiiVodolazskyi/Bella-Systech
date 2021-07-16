@@ -53,6 +53,9 @@ section.request
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: center
+		background-color: $cream
+		.text
+			max-width: 618px
 		.request_img
 			height: 100%
 			max-height: 490px
@@ -61,10 +64,11 @@ section.request
 			left: 0
 			top: 50%
 			transform: translate(-300px, -50%)
+		p
+			margin-top: 18px
 		form
 			position: relative
 			margin-top: 48px
-			width: 60%
 			display: flex
 			flex-wrap: wrap
 			gap: 18px
@@ -167,7 +171,6 @@ section.more
 		line-height: 1.33
 		margin-top: 18px
 
-
 /* ------------------ oborudovanie-inner ------------------ */
 
 section.page_header
@@ -180,8 +183,48 @@ section.page_header
 section.all_equipment
 	margin-top: 72px
 
+/* ------------------ kosmetika ------------------ */
 
+section.kosmetikaBanner
+	.slide
+		background-color: $dark
+		color: $w
+		&.slick-slide[aria-hidden="true"]
+			opacity: 1 // opacity 0 with dark background cause blink effect
+	.breadcrumbs .wrapper
+		margin: 18px 0
+		width: max-content
+	.wrapper .image
+		&::before, &::after
+			display: none
+		img
+			max-height: unset
+			max-width: unset
 
+section.categories
+
+section.popular
+
+section.lines
+
+section.dealer
+	background-color: $cream
+	padding: 96px 0
+	.wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	.left
+		width: 50%
+		padding-right: 8%
+	.right
+		width: 50%
+		.city_filials
+		.filial
+		.street
+			@include flex
+			img
+				width: 24px
 
 
 

@@ -22,7 +22,7 @@ img { width: 100%; user-select: none; outline: none; flex-shrink: 0; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold; white-space: normal; }
 
-svg { overflow: visible; transition: all 0.2s linear; }
+svg { max-width: 72px; overflow: visible; transition: all 0.2s linear; }
 
 svg g, svg path { transition: all 0.2s linear; fill: inherit; }
 
@@ -42,7 +42,9 @@ p.p-2 { font-size: 30px; line-height: 1.13; }
 
 p.p-3 { font-size: 24px; line-height: 1.33; }
 
-p.p-4, p.p-5 { font-size: 18px; line-height: 1.33; }
+p.p-4 { font-size: 20px; line-height: 1.4; }
+
+p.p-5, p.p-6 { font-size: 18px; line-height: 1.33; }
 
 button:not(.slick-arrow), .button:not(.slick-arrow), input[type=button]:not(.slick-arrow), input[type=submit]:not(.slick-arrow) { padding: 18px 36px; border-radius: 6px; font-size: 24px; font-weight: 500; line-height: 1.21; white-space: nowrap; transition: all 0.2s linear; }
 
@@ -332,6 +334,70 @@ header #signupMobile { display: none; width: 100%; font-size: 18px; border-radiu
 
 .cards-blurred .card .text { width: calc( 100% - 48px); position: relative; backdrop-filter: blur(20.2px); padding: 36px 30px; transform: translateX(28px); color: #ffffff; }
 
+.cards-categories { display: flex; justify-content: space-between; gap: 24px; }
+
+.cards-categories .card { width: calc( 50% - 24px); height: 480px; overflow: hidden; padding: 72px 60px; position: relative; display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+
+.cards-categories .card .image { position: absolute; z-index: 0; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
+
+.cards-categories .card .image img { min-width: 100%; min-height: 100%; }
+
+.cards-categories .card .text { position: relative; z-index: 5; margin-top: auto; }
+
+.cards-categories .card .text h4 { max-width: 500px; }
+
+.cards-categories .card .text .button { margin-top: 24px; }
+
+.cards-popular { gap: 24px; flex-wrap: wrap; }
+
+.cards-popular .card { width: calc( 100% / 5 - 24px); }
+
+.cards-popular .card .image { display: inline-flex; justify-content: center; align-items: center; }
+
+.cards-popular .card .image img { max-width: 95%; max-height: 95%; }
+
+.cards-popular .card .text { margin-top: 18px; line-height: 1.33; }
+
+.cards-popular .card .text h6 { font-size: 18px; }
+
+.cards-popular .card .text strong { display: inline-block; margin-top: 12px; color: #d02029; font-size: 24px; }
+
+.cards-lines { flex-direction: column; }
+
+.cards-lines .card { width: 900px; height: 600px; position: relative; }
+
+.cards-lines .card::before { content: ''; position: absolute; z-index: -1; border: 20px solid var(--figure-color); background-color: #00000000; }
+
+.cards-lines .card .text { background-color: #ffffff; position: absolute; z-index: 10; bottom: 48px; max-width: 504px; padding: 36px 24px; -webkit-backdrop-filter: blur(20.2px); backdrop-filter: blur(20.2px); }
+
+.cards-lines .card .text a { margin-top: 12px; color: #d02029; }
+
+.cards-lines .card .text a:hover { color: #49bfc6; }
+
+.cards-lines .card img { object-fit: cover; width: auto; }
+
+.cards-lines .card:not(:first-child) { margin-top: 144px; }
+
+.cards-lines .card:nth-of-type(odd) { align-self: flex-start; }
+
+.cards-lines .card:nth-of-type(odd) .text { right: -400px; }
+
+.cards-lines .card:nth-of-type(even) { align-self: flex-end; }
+
+.cards-lines .card:nth-of-type(even)::before { border-radius: 50%; }
+
+.cards-lines .card:nth-of-type(even) .text { left: -400px; }
+
+.cards-lines .card:nth-of-type(1)::before { width: 446px; height: 330px; left: -180px; bottom: -115px; }
+
+.cards-lines .card:nth-of-type(2)::before { width: 506px; height: 506px; left: -210px; bottom: -75px; }
+
+.cards-lines .card:nth-of-type(3)::before { width: 433px; height: 376px; left: -100px; bottom: -130px; }
+
+.cards-lines .card:nth-of-type(4)::before { width: 408px; height: 408px; right: -110px; bottom: -144px; }
+
+.cards-lines .card:nth-of-type(5)::before { width: 631px; height: 370px; left: -90px; top: -92px; }
+
 /* ------------------ Home ------------------ */
 section.homeBanner { overflow: hidden; background-color: #f7f7f7; }
 
@@ -353,11 +419,15 @@ section.homeBanner .wrapper .image::after { content: ''; z-index: 0; position: a
 
 section.homeBanner .wrapper .image img { position: relative; z-index: 3; max-width: 90%; max-height: 90%; display: block; margin-top: auto; margin-left: auto; }
 
-section.request .wrapper { width: 56.25%; margin: 0 0 0 auto; padding: 120px 96px; background-repeat: no-repeat; background-size: cover; background-position: center; }
+section.request .wrapper { width: 56.25%; margin: 0 0 0 auto; padding: 120px 96px; background-repeat: no-repeat; background-size: cover; background-position: center; background-color: #f7f7f7; }
+
+section.request .wrapper .text { max-width: 618px; }
 
 section.request .wrapper .request_img { height: 100%; max-height: 490px; width: auto; position: absolute; left: 0; top: 50%; transform: translate(-300px, -50%); }
 
-section.request .wrapper form { position: relative; margin-top: 48px; width: 60%; display: flex; flex-wrap: wrap; gap: 18px; }
+section.request .wrapper p { margin-top: 18px; }
+
+section.request .wrapper form { position: relative; margin-top: 48px; display: flex; flex-wrap: wrap; gap: 18px; }
 
 section.request .wrapper form input { width: calc( 100% / 2 - 9px); background-color: rgba(255, 255, 255, 0.24); border-radius: 6px; border: solid 1px rgba(31, 38, 38, 0.24); padding: 22px 24px; font-size: 18px; }
 
@@ -407,6 +477,29 @@ section.page_header { margin-top: 120px; }
 section.page_header h2 { max-width: 1080px; margin: 0 auto; text-align: center; }
 
 section.all_equipment { margin-top: 72px; }
+
+/* ------------------ kosmetika ------------------ */
+section.kosmetikaBanner .slide { background-color: #1f2626; color: #ffffff; }
+
+section.kosmetikaBanner .slide.slick-slide[aria-hidden="true"] { opacity: 1; }
+
+section.kosmetikaBanner .breadcrumbs .wrapper { margin: 18px 0; width: max-content; }
+
+section.kosmetikaBanner .wrapper .image::before, section.kosmetikaBanner .wrapper .image::after { display: none; }
+
+section.kosmetikaBanner .wrapper .image img { max-height: unset; max-width: unset; }
+
+section.dealer { background-color: #f7f7f7; padding: 96px 0; }
+
+section.dealer .wrapper { display: flex; align-items: flex-start; justify-content: space-between; }
+
+section.dealer .left { width: 50%; padding-right: 8%; }
+
+section.dealer .right { width: 50%; }
+
+section.dealer .right .street { display: flex; justify-content: space-between; align-items: center; }
+
+section.dealer .right .street img { width: 24px; }
 
 footer { width: 100%; background-color: #1f2626; color: #ffffff; padding: 96px 0; }
 
@@ -488,7 +581,7 @@ footer .contacts > div .messengers img { width: 36px; height: 36px; }
 
 .slick-slider[data-type=vs1] .slick-dots li button[aria-selected=true]::after { width: 72px; background-color: #d02029; }
 
-.slick-slider[data-type=vs1] .slick-arrow { width: 30px; height: 30px; right: 36px; top: 50%; transition: all 0.2s linear; }
+.slick-slider[data-type=vs1] .slick-arrow { width: 30px; height: 30px; right: 36px; top: 50%; margin: 0; transition: all 0.2s linear; }
 
 .slick-slider[data-type=vs1] .slick-arrow svg { width: 24px; fill: none; }
 

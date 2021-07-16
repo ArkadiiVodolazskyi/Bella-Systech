@@ -234,6 +234,130 @@
 				padding: 36px 30px
 				transform: translateX(28px)
 				color: $w
+	&-categories
+		display: flex
+		justify-content: space-between
+		gap: 24px
+		.card
+			width: calc( 50% - 24px )
+			height: 480px
+			overflow: hidden
+			padding: 72px 60px
+			position: relative
+			display: inline-flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-end
+			.image
+				position: absolute
+				z-index: 0
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				width: 100%
+				height: 100%
+				img
+					min-width: 100%
+					min-height: 100%
+			.text
+				position: relative
+				z-index: 5
+				margin-top: auto
+				h4
+					max-width: 500px
+				.button
+					margin-top: 24px
+	&-popular
+		gap: 24px
+		flex-wrap: wrap
+		.card
+			width: calc( 100% / 5 - 24px )
+			.image
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				img
+					max-width: 95%
+					max-height: 95%
+			.text
+				margin-top: 18px
+				line-height: 1.33
+				h6
+					font-size: 18px
+				strong
+					display: inline-block
+					margin-top: 12px
+					color: $red
+					font-size: 24px
+	&-lines
+		flex-direction: column
+		.card
+			width: 900px
+			height: 600px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				z-index: -1
+				border: 20px solid var(--figure-color)
+				background-color: $tsp
+			.text
+				background-color: $w
+				position: absolute
+				z-index: 10
+				bottom: 48px
+				max-width: 504px
+				padding: 36px 24px
+				-webkit-backdrop-filter: blur(20.2px)
+				backdrop-filter: blur(20.2px)
+				a
+					margin-top: 12px
+					color: $red
+					&:hover
+						color: $aqua
+			img
+				object-fit: cover
+				width: auto
+			&:not(:first-child)
+				margin-top: 144px
+			&:nth-of-type(odd)
+				align-self: flex-start
+				.text
+					right: -400px
+			&:nth-of-type(even)
+				align-self: flex-end
+				&::before
+					border-radius: 50%
+				.text
+					left: -400px
+			&:nth-of-type(1)::before
+				width: 446px
+				height: 330px
+				left: -180px
+				bottom: -115px
+			&:nth-of-type(2)::before
+				width: 506px
+				height: 506px
+				left: -210px
+				bottom: -75px
+			&:nth-of-type(3)::before
+				width: 433px
+				height: 376px
+				left: -100px
+				bottom: -130px
+			&:nth-of-type(4)::before
+				width: 408px
+				height: 408px
+				right: -110px
+				bottom: -144px
+			&:nth-of-type(5)::before
+				width: 631px
+				height: 370px
+				left: -90px
+				top: -92px
+
+
 
 
 

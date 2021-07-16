@@ -27,3 +27,7 @@
 	- pros_single
 	- cite
 8. 016 - history
+
+# Fix bugs
+- Slick slider bug with 'fade' property on vertical slider.
+- Fix slider bug with margins - need to center cards box.
