@@ -22,7 +22,177 @@ AOS.init({
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Slicks options
+  slickOptions = {
+    'vs1': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      speed: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: true,
+      variableWidth: false,
+      vertical: true,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: `
+        <button class="slick-arrow slick-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12.2 -12.2 28.3 17.2"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(180)"/></svg>
+        </button>
+      `,
+      nextArrow: `
+        <button class="slick-arrow slick-next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="11.8 0.7 28.3 17"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(0)"/></svg>
+        </button>
+      `,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300,
+            vertical: false,
+            verticalSwiping: false,
+          },
+        },
+      ],
+    },
+    'hs1': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: false,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: `
+        <button class="slick-arrow slick-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0.7 17.1 28.3"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(90)"/></svg>
+        </button>
+      `,
+      nextArrow: `
+        <button class="slick-arrow slick-next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="11.5 -23.5 17.5 28.5"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(-90)"/></svg>
+        </button>
+      `,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            draggable: false,
+            touchThreshold: 300
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            draggable: false,
+            touchThreshold: 300
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300
+          },
+        },
+      ],
+    },
+    'hs2': {
+      arrows: false,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: false,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300
+          },
+        },
+      ],
+    },
+  }
 
+  // Init desktops
+  const toSlicks = document.querySelectorAll('.toSlick[data-type]:not([data-mobile=true])');
+  if (toSlicks.length) {
+    toSlicks.forEach(toSlick => {
+      const type = toSlick.getAttribute('data-type');
+      $(toSlick).slick(slickOptions[type]);
+    });
+  }
+
+  // Init mobiles only
+  if (window.innerWidth < 480) {
+    const toSlicksMob = document.querySelectorAll('.toSlick[data-mobile=true])');
+    if (toSlicksMob.length) {
+      toSlicksMob.forEach(toSlick => {
+        const type = toSlick.getAttribute('data-type');
+        $(toSlick).slick(slickOptions[type]);
+      });
+    }
+  }
 });
 
 window.addEventListener("load", () => {
@@ -81,7 +251,7 @@ window.addEventListener("load", () => {
         readMores[i].addEventListener('click', () => {
           if (wrappeds[i].classList.contains('active')) {
             wrappeds[i].classList.remove('active');
-            readMores[i].innerText = 'Читать далее'
+            readMores[i].innerText = 'Подробнее'
           } else {
             wrappeds[i].classList.add('active');
             readMores[i].innerText = 'Свернуть'

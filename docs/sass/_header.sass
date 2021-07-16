@@ -2,7 +2,7 @@
 	position: fixed
 	z-index: 150
 	left: 0
-	top: 110px
+	top: 122px
 	right: 0
 	bottom: 0
 	width: 100vw
@@ -85,6 +85,7 @@ header
 		> button
 			align-self: stretch
 			font-size: 24px
+			border-radius: 0
 	.bottom
 		box-shadow: 0 3px 12px 0 rgba(31, 38, 38, 0.08)
 		background-color: $w
@@ -92,6 +93,8 @@ header
 		.wrapper
 			@include flex
 			flex-wrap: wrap
+			button
+				margin: 0
 			#openCallForm
 				display: none
 				justify-content: center
@@ -144,7 +147,7 @@ header
 #mobileMenu
 	position: fixed
 	z-index: 200
-	top: 110px
+	top: 122px
 	left: 0
 	right: 0
 	background-color: $dark

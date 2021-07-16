@@ -2,11 +2,12 @@
 # Cards types
 1. 001 - main
 	- equipment
-	- pro
+	- pros
 	- service
+	- pros2
 	- blurred
 2. 003 - oborudovanie–inner
-	- blurred
+	- equipment
 	- pros_single
 3. 005 - kosmetika
 	- category

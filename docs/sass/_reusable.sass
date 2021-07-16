@@ -9,6 +9,7 @@ $red:			#d02029
 $cream:		#f7f7f7
 $lpink:		#f5e5e5
 $aqua:		#49bfc6
+$laqua:		#e5f1f5
 $lgrey:		#7d8d8d
 
 // ---------------------------------------------------------------- Reset styles
@@ -24,14 +25,14 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button
+time, mark, audio, video, button, input
 	margin: 0
 	padding: 0
 	border: 0
 	font-size: 100%
 	font-family: 'Mabry Pro'
-	vertical-align: baseline
 	color: inherit
+	box-sizing: border-box
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -73,6 +74,7 @@ img
 	flex-shrink: 0
 h1, h2, h3, h4, h5, h6
 	font-weight: bold
+	white-space: normal
 svg
 	overflow: visible
 	transition: all 0.2s linear
@@ -114,24 +116,25 @@ button,
 .button,
 input[type=button],
 input[type=submit]
-	padding: 18px 36px
-	border-radius: 6px
-	font-size: 24px
-	font-weight: 500
-	line-height: 1.21
-	white-space: nowrap
-	transition: all 0.2s linear
-	&.empty
-		border: 2px solid $red
-		color: $dark
-		&:hover
+	&:not(.slick-arrow)
+		padding: 18px 36px
+		border-radius: 6px
+		font-size: 24px
+		font-weight: 500
+		line-height: 1.21
+		white-space: nowrap
+		transition: all 0.2s linear
+		&.empty
+			border: 2px solid $red
+			color: $dark
+			&:hover
+				background-color: $red
+				color: $w
+		&.filled
 			background-color: $red
 			color: $w
-	&.filled
-		background-color: $red
-		color: $w
-		&:hover
-			background-color: $aqua
+			&:hover
+				background-color: $aqua
 a
 	white-space: nowrap
 	text-decoration: none
@@ -159,22 +162,41 @@ a
 		opacity: 1
 		visibility: visible
 
-// .wrapped
-// 	transition: all 0.2s linear
-// 	max-height: 0
-// 	opacity: 0
-// 	visibility: hidden
-// 	&.active
-// 		max-height: 1000px
-// 		opacity: 1
-// 		visibility: visible
-// .readMore
-// 	font-size: 18px
-// 	font-weight: 500
-// 	margin-top: 18px
-	// color: $gm
-	// &:hover
-	// 	color: $purple
+.wrapped
+	transition: all 0.2s linear
+	max-height: 430px
+	position: relative
+	z-index: 10
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		z-index: 20
+		background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0), #f7f7f7)
+		left: 0
+		right: 0
+		bottom: 0
+		height: 120px
+		transition: all 0.2s linear
+		opacity: 1
+		visibility: visible
+	&.active
+		max-height: 2000px
+		&::after
+			opacity: 0
+			visibility: hidden
+.readMore
+	font-size: 18px
+	font-weight: 500
+	margin-top: 18px
+	color: $red
+	box-shadow: none
+	padding: 0
+	margin: 0
+	text-align: center
+	width: 100%
+	&:hover
+		color: $aqua
 
 // ---------------------------------------------------------------- Mixins
 @mixin flex
@@ -183,15 +205,17 @@ a
 	align-items: center
 
 // ---------------------------------------------------------------- Figures
-.aquaEmpty
+@mixin aquaEmpty
+	content: ''
+	z-index: 0
 	position: absolute
 	border: 20px solid rgba(#49bfc6, 0.2)
 	background-color: $tsp
-.pinkFilled
+@mixin pinkFilled
+	content: ''
+	z-index: 0
 	position: absolute
 	background-color: $lpink
-
-// ---------------------------------------------------------------- Slick
 
 // ---------------------------------------------------------------- Common styles
 html
@@ -206,10 +230,9 @@ html
 body
 	width: 100%
 	height: 100%
-	padding-top: 145px
+	padding-top: 140px
 	position: relative
 	z-index: 1
-	overflow-x: hidden
 	&.discroll
 		position: fixed
 		overflow: hidden
@@ -218,8 +241,16 @@ section
 	position: relative
 	z-index: 5
 	width: 100%
-	button
-		box-shadow: 0 12px 18px 0 rgba(208, 32, 41, 0.18)
+	&:not(:first-of-type)
+		margin-top: 144px
+	.wrapper > h2, > h2
+		@include flex
+		margin-bottom: 48px
+section, .wrapper
+	> .button, > button
+		display: none
+		width: max-content
+		margin: 24px auto 0
 
 .wrapper
 	width: 81.25%
@@ -234,8 +265,6 @@ section
 	top: 0
 	right: 0
 	bottom: 0
-	// background-color: rgba(#000, 0.9)
-	// backdrop-filter: blur(9.6px)
 	width: 100vw
 	height: 100vh
 	overflow: hidden
@@ -246,3 +275,29 @@ section
 	&.active
 		opacity: 1
 		visibility: visible
+
+.breadcrumbs
+	.wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 18px 0
+		overflow-x: auto
+		scrollbar-width: none
+		&::-webkit-scrollbar
+			display: none
+		a
+			color: $lgrey
+			font-size: 18px
+			line-height: 1.22
+			&:hover
+				color: $aqua
+			&:not(:first-child)
+				&::before
+					content: '→'
+					margin: 0 12px
+					color: $lgrey
+			&.current
+				color: $aqua
+				pointer-events: none
+

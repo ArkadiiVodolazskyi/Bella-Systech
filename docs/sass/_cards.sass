@@ -1,0 +1,244 @@
+.cards
+	display: flex
+	&-equipment
+		flex-direction: row
+		@media (min-width: 1024px)
+			&:hover .card
+				opacity: 0.3
+		.card
+			width: 20%
+			overflow: hidden
+			height: 720px
+			position: relative
+			transition: all 0.2s linear
+			&:nth-of-type(1)
+				background-color: #e5f1f5
+			&:nth-of-type(2)
+				background-color: #f5e5e5
+			&:nth-of-type(3)
+				background-color: #f4f5e5
+			&:nth-of-type(4)
+				background-color: #fffbe3
+			&:nth-of-type(5)
+				background-color: #f7f7f7
+			&:nth-of-type(6)
+				background-color: lighten($aqua, 40%)
+			@media (min-width: 1024px)
+				&:hover
+					width: 25%
+					opacity: 1
+			.equip_logo
+				position: absolute
+				z-index: 1
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+				max-height: 90%
+				width: auto
+			.equip_img
+				width: auto
+				height: 130%
+				position: absolute
+				z-index: 5
+				left: 0
+				bottom: 0
+				transform: translate(-30%, 15%)
+			.text
+				position: absolute
+				z-index: 10
+				bottom: 48px
+				right: 0
+				-webkit-backdrop-filter: blur(20.2px)
+				backdrop-filter: blur(20.2px)
+				background-color: $w
+				padding: 36px 24px
+				width: 284px
+				max-width: 100%
+				p
+					margin-top: 12px
+				a
+					margin-top: 18px
+					color: $red
+					&:hover
+						color: $aqua
+		.all
+			display: none
+			align-self: center
+			margin: 0 auto
+	&-equipment-all
+		flex-direction: row
+		flex-wrap: wrap
+		gap: 24px
+		.card
+			width: calc( 100% / 4 - 24px )
+			overflow: hidden
+			height: 600px
+			position: relative
+			background-color: $cream
+			padding: 48px 0 48px 88px
+			display: inline-flex
+			flex-direction: column
+			align-items: flex-end
+			justify-content: flex-end
+			.equip_img
+				width: auto
+				height: 100%
+				position: absolute
+				z-index: 5
+				left: 0
+				bottom: 0
+				transform: translate(-30%, 15%)
+			.text
+				position: relative
+				z-index: 10
+				background-color: rgba($w, 0.3)
+				backdrop-filter: blur(20.2px)
+				padding: 36px 24px
+				h6
+					line-height: 1.17
+				p
+					margin-top: 12px
+				a
+					margin-top: 18px
+					color: $red
+					&:hover
+						color: $aqua
+	&-pros
+		gap: 24px
+		align-items: stretch
+		.card
+			width: calc( 100% / 3 - 24px )
+			max-width: 504px
+			border: solid 10px $laqua
+			padding: 60px
+			background-color: $w
+			flex-grow: 1
+			img
+				width: 72px
+			h5
+				margin-top: 24px
+			p
+				margin-top: 18px
+			button, .button
+				margin-top: 24px
+				box-shadow: none
+	&-service
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: stretch
+		counter-reset: card
+		.card
+			width: 20%
+			height: 580px
+			border: 1px solid $w
+			position: relative
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: flex-end
+			padding: 48px 0 48px 48px
+			overflow: hidden
+			img
+				min-width: 100%
+				min-height: 100%
+				position: absolute
+				z-index: 0
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				transition: all 0.2s linear
+				filter: grayscale(1)
+			&:hover img
+				filter: grayscale(0)
+			.text
+				width: 100%
+				position: relative
+				background-color: $w
+				backdrop-filter: blur(20.2px)
+				padding: 24px
+				h6
+					position: relative
+					white-space: normal
+					&::before
+						counter-increment: card
+						content: counters(card, ".", decimal-leading-zero)
+						font-size: 48px
+						color: rgba($red, 0.5)
+						line-height: 1.21
+						font-weight: bold
+						position: absolute
+						top: 0
+						left: 0
+						transform: translate(0, -100%)
+	&-pro2
+		flex-wrap: wrap
+		gap: 24px
+		.card
+			width: calc( 100% / 2 - 24px )
+			max-width: 504px
+			box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.08)
+			padding: 60px 48px
+			background-color: $w
+			img
+				width: 72px
+			h5
+				margin-top: 24px
+			p
+				margin-top: 18px
+	&-brands
+		display: block
+		margin: 0 -60px
+		.card
+			display: inline-block
+			vertical-align: middle
+			margin: 0 60px
+			&.slick-slide[aria-hidden="true"]
+				opacity: 1
+				visibility: visible
+			img
+				max-width: 220px
+	&-blurred
+		display: block
+		width: 100%
+		.card
+			width: 25%
+			height: 600px
+			position: relative
+			display: inline-flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: flex-end
+			padding: 48px 0
+			margin: 0 48px
+			.image
+				width: 100%
+				height: 100%
+				position: absolute
+				z-index: 0
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				overflow: hidden
+				img
+					min-width: 100%
+					min-height: 100%
+					position: absolute
+					z-index: 0
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+			.text
+				width: calc( 100% - 48px )
+				position: relative
+				backdrop-filter: blur(20.2px)
+				padding: 36px 30px
+				transform: translateX(28px)
+				color: $w
+
+
+
+
+
+
+
+

@@ -1,10 +1,27 @@
 @media (max-width: 1600px)
+	h2
+		font-size: 48px
+	h4
+		font-size: 30px
+	p.p-1
+		font-size: 30px
+
 	button, .button, input[type="button"], input[type="submit"]
 		padding: 12px 24px
 		font-size: 20px
 	p
 		&.p-3
 			font-size: 20px
+
+	.cards-pros .card
+		padding: 48px 24px
+	.cards-service .card
+		width: 25%
+	.cards-equipment-all .card
+		padding: 48px 0 48px 48px
+
+	section:not(:first-of-type)
+		margin-top: 120px
 
 	header .top
 		nav ul li a
@@ -29,9 +46,20 @@
 			a
 				font-size: 24px
 
+	section.request .wrapper form
+		width: 100%
+	section.pros
+		padding: 72px 0
+
 @media (max-width: 1440px)
+	h5
+		font-size: 27px
+
 	.wrapper
 		width: 90%
+
+	section:not(:first-of-type)
+		margin-top: 96px
 
 	header .top
 		padding-left: 12px
@@ -55,11 +83,48 @@
 			> div
 				margin-top: 36px
 
+	.cards-equipment .card .text
+		padding: 24px 18px
+	.cards-brands
+		margin: 0 -18px
+		.card
+			margin: 0 18px
+	.cards-equipment-all .card
+		width: calc( 100% / 3 - 24px)
+
 @media (max-width: 1280px)
+	h2
+		font-size: 42px
+	p.p-1
+		font-size: 27px
 	p.p-3
 		font-size: 18px
 	button, .button, input[type="button"], input[type="submit"]
 		padding: 12px 18px
+
+	.slick-slider[data-type="hs1"] .slick-arrow
+		&.slick-prev
+			transform: translate(-100%, -100%)
+		&.slick-next
+			transform: translate(0, -100%)
+
+	.cards-pros
+		flex-wrap: wrap
+		justify-content: center
+		.card
+			width: calc( 100% / 2 - 24px)
+			flex-grow: 0
+	.cards-service .card
+		width: calc( 100% / 3 )
+		height: 460px
+	.cards-blurred
+		.card
+			margin: 0 24px
+	.cards-equipment-all .card
+		height: 480px
+
+	section:not(:first-of-type)
+		margin-top: 72px
 
 	header .top nav ul li a
 		font-size: 18px
@@ -84,7 +149,66 @@
 				.messengers li:not(:first-child)
 					margin-left: 12px
 
+	section.request .wrapper
+		width: 80%
+		.request_img
+			transform: translate(-200px, -50%)
+	section.why .wrapper
+		flex-direction: column
+		h2
+			width: 100%
+			padding: 0
+			justify-content: center
+			margin-bottom: 36px
+		.cards
+			width: 100%
+			justify-content: center
+	section.howwork .wrapper
+		h2
+			width: 40%
+		ul
+			width: 60%
+	section.page_header
+		margin-top: 72px
+
 @media (max-width: 1024px)
+	h2, h3
+		font-size: 36px
+	p.p-1
+		font-size: 24px
+
+	section
+		.wrapper > h2, > h2
+			.button, button
+				display: none
+	section, .wrapper
+		> .button, > button
+			display: block
+
+	.cards-equipment
+		flex-wrap: wrap
+		.card
+			width: 50%
+			height: 480px
+			> a
+				position: absolute
+				z-index: 10
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+			.equip_img
+				bottom: unset
+				top: 50%
+				transform: translate(0, -50%)
+		.all
+			display: block
+	.cards-service .card
+		width: calc( 100% / 2 )
+		height: 360px
+	.cards-equipment-all .card
+		width: calc( 100% / 2 - 24px)
+
 	header
 		.top
 			display: none
@@ -94,7 +218,10 @@
 					display: inline-flex
 			.logo
 				width: 210px
-
+		#signupMobile
+			display: block
+	body
+		padding-top: 120px
 	footer
 		.wrapper
 			grid-template-columns: repeat(2, 50%)
@@ -106,13 +233,110 @@
 		.footer_block
 			padding-right: 0
 
+	section.homeBanner
+		.slide
+			height: auto
+		.wrapper
+			flex-direction: column-reverse
+			padding: 36px 0
+			.image
+				width: 100%
+				max-width: 450px
+				margin: 0 auto
+				img
+					margin: 0 auto
+			.text
+				width: 80%
+				margin: 0 auto
+				.button
+					margin-top: 24px
+	section.request .wrapper
+		width: 100%
+		margin: 0 auto
+		padding: 72px
+		.request_img
+			display: none
+		form
+			margin-top: 36px
+	section.howwork .wrapper
+		flex-direction: column
+		h2
+			width: 100%
+		ul
+			width: 100%
+			li
+				font-size: 24px
+				padding-left: 110px
+				&::before
+					font-size: 36px
+				&::after
+					transform: translate(60px, -50%)
+	section.partners:before
+		display: none
+	section.more
+		padding: 48px 0 12px
+		.wrapper
+			width: 90%
+
+@media (max-width: 900px)
+	.cards-pros .card
+		width: 100%
+
+@media (max-width: 850px)
+	.cards-blurred .card
+		height: 480px
+		margin: 0
+
 @media (max-width: 767px)
+	h2, h3
+		font-size: 30px
+	h5
+		font-size: 20px
+	p.p-1
+		font-size: 18px
+
+	button:not(.slick-arrow), .button:not(.slick-arrow), input[type="button"]:not(.slick-arrow), input[type="submit"]:not(.slick-arrow)
+		font-size: 20px
+
+	.slick-slider[data-type="vs1"]
+		.slick-arrow
+			top: unset
+			bottom: 48px
+			&.slick-prev
+				transform: translate(calc(-100% - 9px), 0) rotate(-90deg)
+			&.slick-next
+				transform: translate(0, 0) rotate(-90deg)
+
+	.cards-pro2 .card
+		padding: 36px 24px
+		img
+			width: 48px
+	.cards-brands
+		margin: 0
+		width: 100%
+		.card
+			margin: 0
+			width: 45vw !important
+			max-width: unset
+	.cards-blurred
+		.card
+			min-width: 240px
+			margin: 0 48px
+			&.slick-slide[aria-hidden="true"]
+				opacity: 1
+				visibility: visible
+
+	.breadcrumbs .wrapper
+		justify-content: flex-start
+
 	body
 		padding-top: 110px
+	.wrapper
+		width: 95%
 	header
 		height: 110px
-		#signupMobile
-			display: block
+	#mobileMenu, #overlay
+		top: 110px
 
 	footer .contacts > div
 		flex-direction: column
@@ -121,6 +345,42 @@
 			margin-right: 0
 		.messengers
 			margin-top: 18px
+
+	section.homeBanner
+		.slide
+			width: 100%
+			display: inline-block
+		.wrapper
+			.image
+				&::before
+					width: 251px
+					height: 207px
+					top: 80%
+					left: 30%
+					padding-bottom: 0
+				&::after
+					width: 190px
+					height: 190px
+					right: -30px
+					top: unset
+					left: unset
+					bottom: -100px
+					padding-bottom: 0
+			.text
+				width: 100%
+				p
+					margin-top: 18px
+	section.request .wrapper
+		padding: 48px
+		form input
+			width: 100%
+	section.howwork .wrapper ul li
+		font-size: 18px
+		padding-left: 95px
+		&::after
+			width: 24px
+	section.pros
+		padding: 0
 
 @media (max-width: 700px)
 	footer
@@ -162,8 +422,50 @@
 		.development
 			margin-top: 18px
 
+	.cards-equipment
+		.card
+			width: 100%
+		.all
+			margin-top: 24px
+	.cards-equipment-all .card
+		width: 100%
+		.text
+			max-width: 312px
 
+@media (max-width: 600px)
+	h6
+		font-size: 18px
 
+	.cards-pros .card
+		img
+			width: 48px
+		h5
+			margin-top: 18px
+		p
+			margin-top: 12px
+		button, .button
+			margin-top: 18px
+	.cards-service .card
+		padding: 24px 0 24px 18px
+		.text
+			padding: 18px
+			h6::before
+				font-size: 36px
+	.cards-pro2 .card
+		width: 100%
+
+	section.more p
+		font-size: 18px
+
+@media (max-width: 480px)
+	h3
+		font-size: 24px
+
+	.cards-service .card
+		height: 280px
+
+	section.request .wrapper
+		padding: 48px 18px
 
 
 

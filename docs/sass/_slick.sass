@@ -1,0 +1,89 @@
+.slick-slide
+	transition: all 0.2s linear
+	vertical-align: top
+	&[aria-hidden=true]
+		opacity: 0
+		visibility: hidden
+
+.slick-slider
+	position: relative
+	.slick-arrow, .slick-dots button
+		box-shadow: none
+		border-radius: 0
+		padding: 0
+	.slick-arrow
+		position: absolute
+		z-index: 100
+	&[data-type=vs1]
+		.slick-dots
+			position: absolute
+			z-index: 100
+			right: 36px
+			top: 50%
+			transform: translate(0, -50%)
+			width: 72px
+			li
+				font-size: 0
+				button
+					font-size: 0
+					width: 100%
+					padding: 12px 0
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						z-index: inherit
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
+						height: 2px
+						transition: all 0.2s linear
+						width: 36px
+						background-color: rgba($red, 0.3)
+					&:hover::after
+						width: 48px
+						background-color: rgba($red, 0.6)
+					&[aria-selected=true]::after
+						width: 72px
+						background-color: $red
+		.slick-arrow
+			width: 30px
+			height: 30px
+			right: 36px
+			top: 50%
+			transition: all 0.2s linear
+			svg
+				width: 24px
+				fill: none
+			&.slick-disabled
+				opacity: 0.3
+				pointer-events: none
+			&.slick-prev
+				transform: translate(-50%, calc( -50% - 100px ))
+			&.slick-next
+				transform: translate(-50%, calc( -50% + 100px ))
+			&:hover svg path
+				stroke: $aqua
+	&[data-type=hs1]
+		.slick-arrow
+			width: 70px
+			height: 60px
+			right: 24px
+			top: -48px
+			background-color: $cream
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			transition: all 0.2s linear
+			svg
+				width: 16px
+				fill: none
+			&.slick-disabled
+				opacity: 0.3
+				pointer-events: none
+			&.slick-prev
+				transform: translate(calc( -22px - 100%  ), -100%)
+			&.slick-next
+				transform: translate(-22px, -100%)
+			&:hover svg path
+				stroke: $aqua

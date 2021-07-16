@@ -1,14 +1,20 @@
 # Needed:
+
 - Font MabryPro
 - Header
 	- Как быть с кнопкой "Записаться на тест-драйв" на средних экранах? Она не влезает.
 - Footer
 	- фоновое изображение единой картинкой
+- Main - "Спектр возможностей нашего оборудования"
+	- фотки без ЧБ фильтра
 - Main - Партнёры
 	- изображение карточек 3 и 4
 
 # Complile sass
+
 node-sass -w --sourcemap=none --no-cache --output-style=compact docs/sass/main.sass docs/css/main.css
+
+# General imfo
 
 Font: MabryPro
 
@@ -32,8 +38,8 @@ Functionality:
 1. 001 - main
 	- vertical slider vs1 (banners)
 		- mobile: horizontal slider mhs1
-	- horizontal slider hs1 (post cards)
 	- mobile: horizontal slider mhs2 (brands)
+	- horizontal slider hs1 (post cards)
 2. 003 - oborudovanie–inner
 3. 005 - kosmetika
 	- vertical slider vs1 (banners)
