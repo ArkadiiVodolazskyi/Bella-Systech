@@ -21,7 +21,7 @@
 6. 014 - obucheniye
 	- blurred
 	- news_single
-	- product (people)
+	- teachers (people)
 7. 015 - about-us
 	- service (people)
 	- pros_single

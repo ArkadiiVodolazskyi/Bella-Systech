@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesToScroll: 1,
             arrows: true,
             dots: false,
-            draggable: true,
+            draggable: false,
             touchThreshold: 300,
             vertical: false,
             verticalSwiping: false,
@@ -172,6 +172,93 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
+    'hs3': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: true,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      appendDots: $(".slick-dots-wrapper:not(.second)"),
+      prevArrow: $(".slick-prev:not(.second)"),
+      nextArrow: $(".slick-next:not(.second)")
+    },
+    // Just copied h3 to prevent single controls for two alike sliders on the page
+    'hs4': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: true,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      appendDots: $(".slick-dots-wrapper.second"),
+      prevArrow: $(".slick-prev.second"),
+      nextArrow: $(".slick-next.second")
+    },
+    'hs5': {
+      arrows: true,
+      draggable: true,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: false,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: `
+        <button class="slick-arrow slick-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12.2 -12.2 28.3 17.2"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(180)"/></svg>
+        </button>
+      `,
+      nextArrow: `
+        <button class="slick-arrow slick-next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="11.8 0.7 28.3 17"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(0)"/></svg>
+        </button>
+      `,
+    },
+    'hs6': {
+      arrows: false,
+      draggable: true,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: false,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300,
+            variableWidth: true
+          },
+        },
+      ]
+    }
   }
 
   // Init desktops
@@ -183,19 +270,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Init mobiles only
-  if (window.innerWidth < 480) {
-    const toSlicksMob = document.querySelectorAll('.toSlick[data-mobile=true])');
-    if (toSlicksMob.length) {
-      toSlicksMob.forEach(toSlick => {
+  // Init mobiles
+  const toSlicksMob = document.querySelectorAll('.toSlick[data-mobile=true]');
+  if (toSlicksMob.length) {
+    toSlicksMob.forEach(toSlick => {
+      if (window.innerWidth <= toSlick.getAttribute('data-screen')) {
         const type = toSlick.getAttribute('data-type');
         $(toSlick).slick(slickOptions[type]);
-      });
-    }
+      }
+    });
   }
 });
 
 window.addEventListener("load", () => {
+
+  // ------------ General ------------
 
   // Globals
   const overlay = document.querySelector('#overlay');
@@ -296,6 +385,57 @@ window.addEventListener("load", () => {
             footerBlocks[i].classList.add('active');
           }
         });
+      }
+    }
+  })();
+
+  // ------------ kosmetika ------------
+
+  // Change cities
+  (function() {
+    const cityBtns = document.querySelectorAll('section.dealer .choose_city button');
+    const cityBlocks = document.querySelectorAll('section.dealer .right .cards');
+
+    if(cityBtns.length && cityBlocks.length) {
+      for (let i = 0; i < cityBtns.length; i++) {
+        cityBtns[i].addEventListener('click', () => {
+          for (let j = 0; j < cityBtns.length; j++) {
+            cityBtns[j].classList.remove('active');
+            cityBlocks[j].classList.remove('active');
+          }
+          cityBtns[i].classList.add('active');
+          cityBlocks[i].classList.add('active');
+        }, true);
+      }
+
+      // On mobile we are using select
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect) {
+        citySelect.addEventListener('change', () => {
+          for (let j = 0; j < cityBtns.length; j++) {
+            cityBtns[j].classList.remove('active');
+            cityBlocks[j].classList.remove('active');
+          }
+          cityBlocks[citySelect.selectedIndex + 1].classList.add('active');
+        }, true);
+      }
+    }
+
+    // Expand city filials
+    const cityFilialsHeaders = document.querySelectorAll('section.dealer .right .cards .filial .street');
+    const cityFilials = document.querySelectorAll('section.dealer .right .cards .filial');
+    if (cityFilialsHeaders.length && cityFilials.length) {
+      for (let i = 0; i < cityFilialsHeaders.length; i++) {
+        cityFilialsHeaders[i].addEventListener('click', () => {
+          if (cityFilials[i].classList.contains('active')) {
+            cityFilials[i].classList.remove('active');
+          } else {
+            for (let j = 0; j < cityFilialsHeaders.length; j++) {
+              cityFilials[j].classList.remove('active');
+            }
+            cityFilials[i].classList.add('active');
+          }
+        }, true);
       }
     }
   })();

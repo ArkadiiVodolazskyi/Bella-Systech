@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./fonts/stylesheet.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./js/libs/aos.css">
+	<title>Косметика - товар</title>
+</head>
+<body>
+	<div id="overlay"></div>
+
+	<header>
+		<div class="top">
+			<div class="header_contacts">
+				<ul class="messengers">
+					<li><a href="https://wa.me/0443344862">
+						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+					</a></li>
+					<li><a href="https://t.me/TheSouthernCity">
+						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+					</a></li>
+				</ul>
+				<div class="phones hover_expand_inner">
+					<a href="tel:0443344862">044 334 4862</a>
+					<ul>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+					</ul>
+				</div>
+				<button>Заказать звонок</button>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="./about-us.html">О нас</a></li>
+					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
+					<li><a href="./kosmetika.html">Косметика</a></li>
+					<li><a href="./kosmetika–tovar.html">Товар</a></li>
+					<li><a href="./obucheniye.html">Обучение</a></li>
+					<li><a href="./raspisanie.html">Расписание</a></li>
+				</ul>
+			</nav>
+
+			<div class="languages hover_expand_inner">
+				<a href="#">RU</a>
+				<ul>
+					<li><a href="#">UA</a></li>
+				</ul>
+			</div>
+
+			<button id="signup" class="filled">Записаться <span>на тест-драйв</span></button>
+		</div>
+		<div class="bottom">
+			<div class="wrapper">
+				<button id="openHambMenu">
+					<svg class="hamb" xmlns="http://www.w3.org/2000/svg" viewBox="0 3 24 18">
+						<g transform="translate(-18 -24)">
+								<path fill="#d02029" d="M25.2 20.4a1.2 1.2 0 1 1 0 2.4H3.6a1.2 1.2 0 1 1 0-2.4zm0-7.2a1.2 1.2 0 1 1 0 2.4H3.6a1.2 1.2 0 1 1 0-2.4zm0-7.2a1.2 1.2 0 1 1 0 2.4H3.6a1.2 1.2 0 0 1 0-2.4z" transform="translate(15.6 21.6)"/>
+						</g>
+					</svg>
+					<svg class="cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g id="Mask_Group_56" clip-path="url(#clip-path)" transform="translate(-18 -24)">
+								<path id="ic24-menu" d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" class="cls-3" transform="translate(20.181 23.999) rotate(45)"/>
+								<path id="ic24-menu-2" d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" class="cls-3" transform="translate(17.999 45.818) rotate(-45)"/>
+						</g>
+					</svg>
+				</button>
+
+				<a href="./index.html" class="logo">
+					<img src="./img/logo.svg" alt="logo">
+				</a>
+
+				<button id="openCallForm">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g transform="translate(-1241 -39)">
+								<path fill="#d02029" fill-rule="evenodd" d="M11.466 11.8a1.2 1.2 0 0 0 .534-1V6a3.6 3.6 0 0 0-3.6-3.6H3.6a1.2 1.2 0 0 0-1.2 1.2c0 11.929 10.871 22.8 22.8 22.8a1.2 1.2 0 0 0 1.2-1.2v-4.8a3.6 3.6 0 0 0-3.6-3.6H18a1.2 1.2 0 0 0-1 .534l-2.286 3.43a22.666 22.666 0 0 1-6.35-6.185l-.329-.494zm7.177 7.4H22.8a1.2 1.2 0 0 1 1.2 1.2v3.558a19.018 19.018 0 0 1-6.71-1.769l-.486-.234zM4.842 4.8H8.4A1.2 1.2 0 0 1 9.6 6v4.158L6.844 12a19.143 19.143 0 0 1-2.002-7.2z" transform="translate(1238.6 36.6)"/>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<button id="signupMobile" class="filled">
+			Записаться на тест-драйв
+		</button>
+	</header>
+
+	<div id="mobileMenu">
+		<div class="wrapper">
+
+			<div class="header_contacts">
+				<ul class="messengers">
+					<li><a href="https://wa.me/0443344862">
+						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+					</a></li>
+					<li><a href="https://t.me/TheSouthernCity">
+						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+					</a></li>
+				</ul>
+				<div class="phones hover_expand_inner">
+					<a href="tel:0443344862">044 334 4862</a>
+					<ul>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+						<li><a href="tel:0443344862">044 334 4862</a></li>
+					</ul>
+				</div>
+				<button>Заказать звонок</button>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="./about-us.html">О нас</a></li>
+					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
+					<li><a href="./kosmetika.html">Косметика</a></li>
+					<li><a href="./kosmetika–tovar.html">Товар</a></li>
+					<li><a href="./obucheniye.html">Обучение</a></li>
+					<li><a href="./raspisanie.html">Расписание</a></li>
+				</ul>
+			</nav>
+
+			<div class="languages">
+				<a href="#" class="current">RU</a>
+				<a href="#">UA</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Content start -->
+	<section class="product_info">
+		<div class="wrapper">
+			<div class="left">
+				<h3 class="name">Delta Active Cream. Восстанавливающий крем «Дельта»</h3>
+				<img src="./img/product_image.png" alt="product_image">
+			</div>
+			<div class="right">
+				<h3 class="name">Delta Active Cream.<br>
+					Восстанавливающий крем «Дельта»</h3>
+
+				<div class="manage">
+					<div class="price">
+						<h3 class="value">2 320 грн</h3>
+						<div class="amount">50ml</div>
+					</div>
+					<button class="filled">
+						Оставить заявку
+					</button>
+				</div>
+
+				<div class="text">
+					<p class="p-3">Крем антибактериальный для проблемной кожи Delta Active Cream нормализует активность сальных желез, уменьшает воспалительный процесс. Заживляет, увлажняет, активизирует процесс восстановления кожи, снижает выраженность рубцов после акне, защищает кожу от обезвоживания, смягчает, питает. Обладает бактерицидным и противовоспалительным действием. Подходит для утреннего и вечернего применения.</p>
+					<p class="p-3 accent">Наносить после тоника лёгкими массирующими движениями на кожу лица утром и вечером, избегая область вокруг глаз.</p>
+				</div>
+
+				<div class="additional">
+					<div>
+						<h4>Активные компоненты</h4>
+						<ul>
+							<li>SRGF H1 Complex</li>
+							<li>Сок алоэ вера</li>
+							<li>Экстракт центеллы азиатской</li>
+							<li>Экстракт плюща обыкновенного</li>
+							<li>Гидролат цветов лотоса орехоносного</li>
+							<li>Экстракт понцируса</li>
+							<li>Пептидный комплекс</li>
+							<li>Экстракт корня софоры</li>
+							<li>Бетаин</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Состав</h4>
+						<p class="p-6">Вода, дипропиленгликоль, глицерин, циклопентасилоксан, сетеариловый спирт, бетаин, алюминия октенилсукцинад, неопентилгликоль дикапрат, метил метакрилат кросс- полимер, ПЕГ-40 стеарат, сорбитан стеарат, стеариновая кислота, бутиленгликоль, вазелин, сок алоэ вера, экстракт центеллы азиатской, 1,2-гексанедиол, пчелиный воск, этил гексанедиол, эктракт плюща обыкновенного, глицерил стеарат SE, диметикон, глицерил стеарат, ПЕГ-100 стеарат, гидролат цветов лотоса орехоносного, экстракт понцируса, экстракт корня софоры, полисорбат 20, глицерил каприлат, ксантановая камедь, трометамин, бета-глюкан, динатрия ЭДТА, лецитин, никотиноил гексапептид-44, sh-олигопептид-1, sh-полипептид-1, sh-полипептид-16, sh-полипептид-4</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="dealer">
+		<div class="wrapper">
+			<div class="left">
+				<h2>Связь с дилером в регионах</h2>
+				<div class="choose_city">
+					<button class="active">Киев</button>
+					<button>Львов</button>
+					<button>Одесса</button>
+					<button>Ровно-Харьков</button>
+					<button>Днепр</button>
+				</div>
+				<div class="select_city">
+					<select id="citySelect">
+						<option selected>Киев</option>
+						<option>Львов</option>
+						<option>Одесса</option>
+						<option>Ровно-Харьков</option>
+						<option>Днепр</option>
+					</select>
+				</div>
+			</div>
+			<div class="right">
+				<div class="cards cards-filials active">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="popular">
+		<div class="wrapper">
+			<h2>Другие продукты линейки ACNEX Science</h2>
+			<div class="cards cards-popular">
+				<a href="./kosmetika–tovar.html" class="card">
+					<div class="image">
+						<img src="./img/product (1).png" alt="product_image">
+					</div>
+					<div class="text">
+						<h6>AC CARE Soothing Sheet Mask/Маска тканевая “Успокаивающая для лечения акне”</h6>
+						<strong class="price">250 грн</strong>
+					</div>
+				</a>
+				<a href="./kosmetika–tovar.html" class="card">
+					<div class="image">
+						<img src="./img/product (2).png" alt="product_image">
+					</div>
+					<div class="text">
+						<h6>ALPHA CLEANSING FOAM / Пенка очищающая «Альфа»</h6>
+						<strong class="price">2 146 грн</strong>
+					</div>
+				</a>
+				<a href="./kosmetika–tovar.html" class="card">
+					<div class="image">
+						<img src="./img/product (3).png" alt="product_image">
+					</div>
+					<div class="text">
+						<h6>ALPHA CLEANSING FOAM / Пенка очищающая «Альфа»</h6>
+						<strong class="price">2 146 грн</strong>
+					</div>
+				</a>
+				<a href="./kosmetika–tovar.html" class="card">
+					<div class="image">
+						<img src="./img/product (4).png" alt="product_image">
+					</div>
+					<div class="text">
+						<h6>Aqua mineral moisture drop/Гель увлажняющий </h6>
+						<strong class="price">1 131 грн</strong>
+					</div>
+				</a>
+				<a href="./kosmetika–tovar.html" class="card">
+					<div class="image">
+						<img src="./img/product (5).png" alt="product_image">
+					</div>
+					<div class="text">
+						<h6>AZULENE COMPLEX AMPOULE 72%/Концентрат с комплексом азулена 72%</h6>
+						<strong class="price">3 509 грн</strong>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="all_equipment all_lines">
+		<div class="wrapper">
+			<h2>Другие линейки</h2>
+			<div class="cards cards-equipment-all cards-equipment_lines">
+				<div class="card">
+					<a href="./oborudovanie–inner.html">
+						<img src="./img/lines (1).png" class="equip_img" alt="main_equipment">
+					</a>
+					<div class="text">
+						<h6>AGE Science. Линия средств для омоложения кожи</h6>
+						<a href="./kosmetika.html">В каталог</a>
+					</div>
+				</div>
+				<div class="card">
+					<a href="./oborudovanie–inner.html">
+						<img src="./img/lines (2).png" class="equip_img" alt="main_equipment">
+					</a>
+					<div class="text">
+						<h6>AQUA Science. Линия средств для увлажнения и защиты кожи</h6>
+						<a href="./kosmetika.html">В каталог</a>
+					</div>
+				</div>
+				<div class="card">
+					<a href="./oborudovanie–inner.html">
+						<img src="./img/lines (3).png" class="equip_img" alt="main_equipment">
+					</a>
+					<div class="text">
+						<h6>White Science. Линия для интенсивного лечения</h6>
+						<a href="./kosmetika.html">В каталог</a>
+					</div>
+				</div>
+				<div class="card">
+					<a href="./oborudovanie–inner.html">
+						<img src="./img/lines (4).png" class="equip_img" alt="main_equipment">
+					</a>
+					<div class="text">
+						<h6>DERMA Science. Линия для восстановления и защиты кожи</h6>
+						<a href="./kosmetika.html">В каталог</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="dealer">
+		<div class="wrapper">
+			<div class="left">
+				<h2>Связь с дилером в регионах</h2>
+				<div class="choose_city">
+					<button class="active">Киев</button>
+					<button>Львов</button>
+					<button>Одесса</button>
+					<button>Ровно-Харьков</button>
+					<button>Днепр</button>
+				</div>
+				<div class="select_city">
+					<select id="citySelect">
+						<option selected>Киев</option>
+						<option>Львов</option>
+						<option>Одесса</option>
+						<option>Ровно-Харьков</option>
+						<option>Днепр</option>
+					</select>
+				</div>
+			</div>
+			<div class="right">
+				<div class="cards cards-filials active">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+				<div class="cards cards-filials">
+					<div class="filial active">
+						<h6 class="street">
+							Ул. Щорса, 32А
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Антоновича, 74
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+					<div class="filial">
+						<h6 class="street">
+							Ул. Василия Тютюнника, 5В
+							<img src="./img/ico_arrowDownDark.svg" alt="ico_arrowDownDark">
+						</h6>
+						<div class="content">
+							<span class="name">Клиника правильной косметологии «Перламутр»</span>
+							<ul class="contacts">
+								<li><a href="tel:+38 (050) 380 63 23">+38 (050) 380 63 23</a></li>
+								<li><a href="tel:+38 (050) 462 40 49">+38 (050) 462 40 49</a></li>
+							</ul>
+							<div class="schedule">Режим работы: ежедевно, с 10:00 до 22:00</div>
+							<img src="./img/office_photo.png" alt="office_photo" class="office_photo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="request">
+		<div class="wrapper" style="background-image: url(./img/request_bg.png);">
+			<img class="request_img" src="./img/request_2.png" alt="request_img" style="transform: translate(-200px, -40%);">
+			<div class="text">
+				<h3>Записаться на обучение</h4>
+					<p class="p-4">Отправьте заявку, и наши консультанты с радостью помогут вам и ответят на все вопросы</p>
+					<form>
+						<input type="text" placeholder="Имя и фамилия">
+						<input type="tel" placeholder="Номер телефона">
+						<input type="text" placeholder="Место работы">
+						<input type="text" placeholder="Должность">
+						<button type="submit" class="filled">Отправить заявку</button>
+					</form>
+			</div>
+		</div>
+	</section>
+	<!-- Content end -->
+
+	<footer>
+		<div class="wrapper">
+			<div class="footer_block main">
+				<h5>Компания
+					<img src="./img/ico_arrowDownDark.svg" alt="ico_arrow">
+				</h5>
+				<ul>
+					<li><a href="./about-us.html">О нас</a></li>
+					<li><a href="./raspisanie.html">Расписание</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+					<li><a href="#">Условия пользования сайтом</a></li>
+				</ul>
+			</div>
+
+			<div class="other_blocks">
+				<div class="footer_block">
+					<h5>Оборудование
+						<img src="./img/ico_arrowDownDark.svg" alt="ico_arrow">
+					</h5>
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Направления</a></li>
+					</ul>
+				</div>
+
+				<div class="footer_block">
+					<h5>Обучение
+						<img src="./img/ico_arrowDownDark.svg" alt="ico_arrow">
+					</h5>
+					<ul>
+						<li><a href="#">Новости</a></li>
+						<li><a href="./raspisanie.html">График обучения</a></li>
+						<li><a href="./history.html">История</a></li>
+						<li><a href="#">Обучающие видео</a></li>
+					</ul>
+				</div>
+
+				<div class="footer_block">
+					<h5>Histolab
+						<img src="./img/ico_arrowDownDark.svg" alt="ico_arrow">
+					</h5>
+					<ul>
+						<li><a href="./kosmetika–tovar.html">Acne Science</a></li>
+						<li><a href="./kosmetika–tovar.html">Age Science</a></li>
+						<li><a href="./kosmetika–tovar.html">Aqua Science Basic</a></li>
+						<li><a href="./kosmetika–tovar.html">Dermo Science</a></li>
+					</ul>
+				</div>
+
+				<div class="footer_block">
+					<h5>Консалтинг
+						<img src="./img/ico_arrowDownDark.svg" alt="ico_arrow">
+					</h5>
+					<ul>
+						<li><a href="#">Как мы работаем</a></li>
+						<li><a href="#">Проектирование</a></li>
+						<li><a href="#">Расчет окупаемости</a></li>
+						<li><a href="#">Маркетинг</a></li>
+						<li><a href="#">Бизнес-план</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="contacts">
+				<ul>
+					<li>
+						<img src="./img/ico_map.svg" alt="">
+						<a href="#">02000 Украина, Киев,<br>
+							ул. Василия Тютюнника, 5В</a>
+					</li>
+					<li class="phones">
+						<img src="./img/ico_phone.svg" alt="ico_phone">
+						<ul>
+							<li><a href="tel:+3800443344862">+3800443344862</a></li>
+							<li><a href="tel:+3800443344862">+3800443344862</a></li>
+						</ul>
+					</li>
+					<li class="email">
+						<img src="./img/ico_mail.svg" alt="">
+						<a href="mailto:office@bella-systech.com.ua">office@bella-systech.com.ua</a>
+					</li>
+				</ul>
+				<div>
+					<button class="filled">Написать нам</button>
+					<ul class="messengers">
+						<li><a href="https://www.facebook.com/bellasystech.ua/">
+							<img src="./img/ico_facebook.svg" alt="">
+						</a></li>
+						<li><a href="https://www.instagram.com/bella_systech.ua/">
+							<img src="./img/ico_instagram.svg" alt="">
+						</a></li>
+						<li><a href="https://t.me/TheSouthernCity">
+							<img src="./img/ico_telegramBlue.svg" alt="">
+						</a></li>
+						<li><a href="https://www.youtube.com/channel/UCoVgfdRbf2Z9V9MNGbT9Frg">
+							<img src="./img/ico_youtube.svg" alt="">
+						</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="p-3 copyright">© 2021 Bella-Systech</p>
+
+			<p class="p-3 development">
+				Создание сайта — <a href="https://nextweb.ua/">NextWeb</a>
+			</p>
+		</div>
+	</footer>
+
+	<script src="./js/libs/jquery-3.5.1.min.js"></script>
+	<script src="./js/libs/slick.min.js"></script>
+	<script src="./js/libs/aos.js"></script>
+	<script src="./js/libs/jquery.maskedinput.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+<html>

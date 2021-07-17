@@ -19,6 +19,8 @@
 		width: 25%
 	.cards-equipment-all .card
 		padding: 48px 0 48px 48px
+	.cards-schedule .card
+		height: 600px
 
 	section:not(:first-of-type)
 		margin-top: 120px
@@ -50,6 +52,8 @@
 		width: 100%
 	section.pros
 		padding: 72px 0
+	section.dealer .left .choose_city button
+		padding: 12px
 
 @media (max-width: 1440px)
 	h5
@@ -91,10 +95,23 @@
 			margin: 0 18px
 	.cards-equipment-all .card
 		width: calc( 100% / 3 - 24px)
+	.cards-lines .card
+		width: 750px
+		height: 500px
+	.cards-teachers .card
+		width: calc( 100% / 4 - 24px)
+		&:last-of-type
+			display: none
+
+	section.product_info .right
+		.name, .value
+			font-size: 36px
 
 @media (max-width: 1280px)
 	h2
 		font-size: 42px
+	h4
+		font-size: 30px
 	p.p-1
 		font-size: 27px
 	p.p-3
@@ -122,9 +139,41 @@
 			margin: 0 24px
 	.cards-equipment-all .card
 		height: 480px
+	.cards-categories .card
+		height: 400px
+		padding: 48px
+	.cards-popular
+		gap: 24px
+		.card
+			width: calc( 100% / 4 - 24px)
+	.cards-lines .card
+		width: 600px
+		height: 400px
+		&::before
+			transform: scale(0.6)
+		&:not(:first-child)
+			margin-top: 72px
+		&:nth-of-type(odd) .text
+			right: -200px
+		&:nth-of-type(even) .text
+			left: -200px
+	.cards-filials
+		font-size: 20px
+		.filial.active
+			.content, .contacts, .schedule, .office_photo
+				margin-top: 12px
+			.contacts li:not(:first-child)
+				margin-top: 4px
+	.cards-schedule
+		justify-content: center
+		.card
+			width: calc( 100% / 2 - 24px)
+			max-width: 480px
 
 	section:not(:first-of-type)
 		margin-top: 72px
+	section.request.no_image
+		margin-bottom: 72px
 
 	header .top nav ul li a
 		font-size: 18px
@@ -170,10 +219,41 @@
 			width: 60%
 	section.page_header
 		margin-top: 72px
+	section.dealer
+		background-color: $tsp
+		padding: 0
+		.wrapper
+			flex-direction: column
+			.left
+				width: 100%
+				padding: 0
+				.choose_city
+					justify-content: center
+			.right
+				width: 100%
+				.filial
+					&:first-child
+						border-top: none
+					.office_photo
+						max-width: 500px
+						margin: 12px auto 0
+						display: block
+	section.product_info .right
+		.text
+			margin-top: 36px
+		.additional
+			margin-top: 36px
+			flex-direction: column
+			> div
+				width: 100%
+			ul li:not(:first-child)
+				margin-top: 12px
 
 @media (max-width: 1024px)
 	h2, h3
 		font-size: 36px
+	h4
+		font-size: 27px
 	p.p-1
 		font-size: 24px
 
@@ -208,6 +288,32 @@
 		height: 360px
 	.cards-equipment-all .card
 		width: calc( 100% / 2 - 24px)
+	.cards-categories
+		gap: 18px
+		.card
+			padding: 36px 24px
+			height: 320px
+			width: calc( 50% - 18px)
+	.cards-popular .card
+		width: calc( 100% / 3 - 24px)
+	.cards-lines .card
+		align-self: center !important
+		&:not(:first-child)
+			margin-top: 144px
+		.text
+			max-width: unset
+			right: unset !important
+			left: unset !important
+			bottom: 0
+			transform: translate(0, 120px)
+	.cards-schedule .card .text .date
+		font-size: 30px
+	.cards-news
+		display: block
+		.card
+			margin: 0 4px
+	.cards-teachers .card
+		width: calc( 100% / 2 - 24px)
 
 	header
 		.top
@@ -236,26 +342,31 @@
 	section.homeBanner
 		.slide
 			height: auto
-		.wrapper
-			flex-direction: column-reverse
-			padding: 36px 0
-			.image
-				width: 100%
-				max-width: 450px
-				margin: 0 auto
-				img
+			> .wrapper
+				flex-direction: column-reverse
+				padding: 0 0 36px 0
+				.image
+					width: 100%
+					max-width: 450px
 					margin: 0 auto
-			.text
-				width: 80%
-				margin: 0 auto
-				.button
-					margin-top: 24px
+					img
+						margin: 0 auto
+				.text
+					width: 80%
+					margin: 0 auto
+					.button
+						margin-top: 24px
+						font-size: 20px
+			.breadcrumbs .wrapper
+				padding: 0
 	section.request .wrapper
 		width: 100%
 		margin: 0 auto
 		padding: 72px
 		.request_img
 			display: none
+		.text
+			max-width: unset
 		form
 			margin-top: 36px
 	section.howwork .wrapper
@@ -277,10 +388,70 @@
 		padding: 48px 0 12px
 		.wrapper
 			width: 90%
+	section.lines
+		padding-bottom: 120px
+	section.about_histolab, section.about_study
+		.wrapper
+			flex-direction: column
+			.text
+				width: 100%
+				padding: 0
+				h2
+					margin-bottom: 24px
+			.videos, .photos
+				width: 100%
+				max-width: 500px
+				margin: 24px auto 0
+				.video::after
+					left: 24px
+					bottom: 24px
+				.slider_controls
+					margin-top: 24px
+	section.product_info
+		padding-top: 48px
+		.wrapper
+			flex-direction: column
+			.left
+				width: 100%
+				.name
+					display: block
+				img
+					max-height: 420px
+					width: auto
+					margin-left: auto
+					margin-right: auto
+					display: block
+			.right
+				width: 100%
+				.name
+					display: none
+				.manage
+					margin-top: 0
+					flex-direction: column
+					align-items: center
+					.price
+						display: flex
+						align-items: flex-end
+						.amount
+							margin-left: 12px
+					button
+						margin: 18px 0 0 0
+	section.obucheniyeBanner .slide > .wrapper
+		padding: 36px 0
+		.text
+			width: 60%
+			margin: 0 auto 0 0
+		.image
+			right: 0
 
 @media (max-width: 900px)
 	.cards-pros .card
 		width: 100%
+	.cards-schedule .card
+		width: 100%
+
+	section.schedule
+		margin: 48px 0 96px
 
 @media (max-width: 850px)
 	.cards-blurred .card
@@ -290,6 +461,10 @@
 @media (max-width: 767px)
 	h2, h3
 		font-size: 30px
+	h4
+		font-size: 24px
+		> br
+			display: none
 	h5
 		font-size: 20px
 	p.p-1
@@ -325,18 +500,59 @@
 			&.slick-slide[aria-hidden="true"]
 				opacity: 1
 				visibility: visible
+	.cards-categories
+		flex-wrap: wrap
+		.card
+			width: 100%
+	.cards-popular:not(.cards-teachers)
+		flex-wrap: nowrap
+		overflow-x: auto
+		overflow-y: hidden
+		scrollbar-width: none
+		&::-webkit-scrollbar
+			display: none
+		.card
+			width: calc( 100% / 3 - 24px)
+			flex-shrink: 0
+			.image
+				height: 300px
+	.cards-lines .card
+		width: 100%
+		max-width: 480px
+		height: auto
+		&::before
+			display: none
+	.cards-filials .filial .street img
+		width: 18px
+	.cards-equipment_lines
+		justify-content: center
+		.card
+			width: 100%
+			max-width: 480px
+			height: 320px
+			padding: 0
+			overflow: visible
+			&:not(:first-child)
+				margin-top: 100px
+			.equip_img
+				transform: translate(-50%, -50%)
+			.text
+				transform: translateY(50%)
+				padding: 24px 18px
+	.cards-teachers
+		gap: 12px
+		.card
+			width: calc( 100% / 2 - 6px)
 
 	.breadcrumbs .wrapper
 		justify-content: flex-start
 
 	body
 		padding-top: 110px
-	.wrapper
-		width: 95%
 	header
 		height: 110px
 	#mobileMenu, #overlay
-		top: 110px
+		top: 122px
 
 	footer .contacts > div
 		flex-direction: column
@@ -381,6 +597,44 @@
 			width: 24px
 	section.pros
 		padding: 0
+	section.categories
+		margin-top: 36px
+	section.dealer .wrapper .left
+		.choose_city
+			display: none
+		.select_city
+			display: block
+	section.request.no_image .wrapper
+		padding: 48px 18px
+	section.all_lines
+		padding-bottom: 72px
+	section.obucheniyeBanner .slide > .wrapper
+		flex-direction: column
+		padding-top: 0
+		.image
+			order: -1
+			position: static
+			max-width: unset
+			transform: unset
+			margin: 0 -6%
+			width: unset
+			img
+				width: 100%
+				height: auto
+		.text
+			width: 100%
+			position: relative
+			&::before
+				height: 100px
+				width: 110%
+				left: -5%
+				top: 0
+				bottom: unset
+				background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))
+				transform: translateY(-100%)
+			.manage
+				margin-top: 24px
+				gap: 24px
 
 @media (max-width: 700px)
 	footer
@@ -453,6 +707,15 @@
 				font-size: 36px
 	.cards-pro2 .card
 		width: 100%
+	.cards-popular:not(.cards-teachers)
+		gap: 8px
+		.card
+			width: 42vw
+	.cards-news .card
+		width: 90vw !important
+		&[aria-hidden="true"]
+			opacity: 1
+			visibility: visible
 
 	section.more p
 		font-size: 18px
@@ -463,12 +726,58 @@
 
 	.cards-service .card
 		height: 280px
+	.cards-categories .card
+		height: 235px
+		.text
+			max-width: 236px
+	.cards-popular .card
+		.image
+			height: 192px
+		.text
+			margin-top: 12px
+			h6
+				font-size: 14px
+				font-weight: normal
+			strong
+				font-size: 20px
+	.cards-lines, .cards-equipment_lines
+		margin: 0 -5%
+	.cards-schedule .card
+		height: 480px
+		padding: 24px 0 24px 48px
+		.text
+			padding: 24px
+			.date
+				font-size: 24px
+			.time
+				font-size: 18px
+			.city
+				font-size: 16px
+			.who
+				font-size: 18px
+			.manage button
+				padding: 18px 24px
+	.cards-some_events
+		display: block
+		margin: 0 -6%
+	.cards-news .card .image
+		height: 280px
+	.cards-teachers .card .text
+		strong
+			font-size: 18px
+			font-weight: 500
+		h6
+			font-size: 16px
+			line-height: 1.25
 
 	section.request .wrapper
 		padding: 48px 18px
-
-
-
+	section.schedule
+		margin: 36px 0 72px
+		h2
+			justify-content: center
+	section.some_events > .all
+		margin-left: 5% !important
 
 
 

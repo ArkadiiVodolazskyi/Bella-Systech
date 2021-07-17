@@ -1,5 +1,4 @@
 # Needed:
-
 - Font MabryPro
 - Header
 	- Как быть с кнопкой "Записаться на тест-драйв" на средних экранах? Она не влезает.
@@ -9,6 +8,15 @@
 	- фотки без ЧБ фильтра
 - Main - Партнёры
 	- изображение карточек 3 и 4
+- Расписание
+	- фоновые изображения (5шт)
+- Обучение
+	- новости (7шт)
+
+# Improvements
+- Custom select kosmetika mobile
+- Custom controls slick
+- Inherit classes with Sass instead of using html - with @extend .class
 
 # Complile sass
 
@@ -38,14 +46,14 @@ Functionality:
 1. 001 - main
 	- vertical slider vs1 (banners)
 		- mobile: horizontal slider mhs1
-	- mobile: horizontal slider mhs2 (brands)
+	- horizontal slider hs2 (brands)
 	- horizontal slider hs1 (post cards)
 2. 003 - oborudovanie–inner
 3. 005 - kosmetika
 	- vertical slider vs1 (banners)
 		- mobile: horizontal slider mhs1
 	- mobile: horizontal slider mhs2 (popular products cards)
-	- horizontal slider hs2 (videos)
+	- horizontal slider hs3 (videos)
 4. 007 - kosmetika–tovar
 	- mobile: horizontal slider mhs2 (other products cards)
 5. 013 - raspisanie
