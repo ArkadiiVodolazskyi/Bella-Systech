@@ -258,7 +258,24 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ]
-    }
+    },
+    'hs7': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: true,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      appendDots: $(".slick-dots-wrapper.hs7"),
+      prevArrow: $(".slick-prev.hs7"),
+      nextArrow: $(".slick-next.hs7")
+    },
   }
 
   // Init desktops

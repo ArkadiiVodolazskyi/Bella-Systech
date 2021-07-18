@@ -12,11 +12,14 @@
 	- фоновые изображения (5шт)
 - Обучение
 	- новости (7шт)
+- Видео и иконки видео это открывает фуллскрин или просто запускает видео?
+- Должны ли красные иконки изменять цвет при наведении?
 
 # Improvements
 - Custom select kosmetika mobile
 - Custom controls slick
 - Inherit classes with Sass instead of using html - with @extend .class
+- Bug about-us - two sliders can't link both dots and buttons
 
 # Complile sass
 

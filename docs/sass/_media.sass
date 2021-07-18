@@ -86,6 +86,10 @@
 				margin-top: 24px
 			> div
 				margin-top: 36px
+				button
+					margin-right: 24px
+				.messengers li:not(:first-child)
+					margin-left: 12px
 
 	.cards-equipment .card .text
 		padding: 24px 18px
@@ -169,6 +173,8 @@
 		.card
 			width: calc( 100% / 2 - 24px)
 			max-width: 480px
+	.cards-team .card
+		width: 25%
 
 	section:not(:first-of-type)
 		margin-top: 72px
@@ -193,10 +199,9 @@
 			> ul li img
 				margin-right: 18px
 			> div
+				flex-wrap: wrap
 				button
-					margin-right: 18px
-				.messengers li:not(:first-child)
-					margin-left: 12px
+					margin: 0 0 18px 0
 
 	section.request .wrapper
 		width: 80%
@@ -207,8 +212,9 @@
 		h2
 			width: 100%
 			padding: 0
-			justify-content: center
 			margin-bottom: 36px
+			br
+				display: none
 		.cards
 			width: 100%
 			justify-content: center
@@ -248,6 +254,24 @@
 				width: 100%
 			ul li:not(:first-child)
 				margin-top: 12px
+	section.obucheniyeBanner .slide
+		height: 480px
+		.wrapper .text
+			width: 50%
+	section.reviews .wrapper
+		width: 90%
+		margin: 0 auto
+	section.media_about .wrapper
+		flex-direction: column
+		h2
+			width: 100%
+			padding: 0
+		.cards
+			width: 100%
+	section.intro
+		margin-top: 36px !important
+	section.history
+		margin: 36px 0 72px !important
 
 @media (max-width: 1024px)
 	h2, h3
@@ -314,6 +338,26 @@
 			margin: 0 4px
 	.cards-teachers .card
 		width: calc( 100% / 2 - 24px)
+	.cards-team .card
+		width: calc( 100% / 3 )
+		height: 440px
+	.cards-media .card
+		gap: 18px
+	.cards-history
+		padding-bottom: 36px
+		.card
+			margin-top: 24px
+			.year
+				display: none
+			.block
+				width: 100%
+				padding: 0 !important
+				.text
+					margin: 0 auto !important
+					&::before
+						display: none
+					.date
+						display: block
 
 	header
 		.top
@@ -443,6 +487,31 @@
 			margin: 0 auto 0 0
 		.image
 			right: 0
+	section.reviews
+		.text
+			.names
+				margin-top: 36px
+			.slider_controls
+				display: none
+		.videos .video
+			height: auto
+			padding-bottom: 0
+			iframe, img
+				position: relative
+				min-height: 210px
+		.wrapper > .slider_controls
+			display: flex
+	section.team .wrapper
+		flex-direction: column
+		&::after
+			top: -36px
+		h2
+			width: 100%
+			padding: 0
+		.text
+			width: 100%
+	section.history .now
+		font-size: 48px
 
 @media (max-width: 900px)
 	.cards-pros .card
@@ -543,6 +612,15 @@
 		gap: 12px
 		.card
 			width: calc( 100% / 2 - 6px)
+	.cards-team .card
+		width: 50%
+		img
+			width: 100%
+			height: auto
+	.cards-media .card
+		width: 100%
+	.cards-history .card .text
+		padding: 24px 36px
 
 	.breadcrumbs .wrapper
 		justify-content: flex-start
@@ -635,6 +713,21 @@
 			.manage
 				margin-top: 24px
 				gap: 24px
+	section.about_banner .slide .wrapper .text::before
+		background: linear-gradient(to top, $cream, rgba($cream, 0.9), rgba($cream, 0.6), rgba($cream, 0))
+	section.reviews .text .slider_controls
+		margin-top: 24px
+	section.team .wrapper
+		&::before, &::after
+			display: none
+		h2
+			margin-bottom: 36px
+	section.why::before
+		display: none
+	section.media_about
+		margin-bottom: 72px
+	section.intro
+		margin-top: 18px !important
 
 @media (max-width: 700px)
 	footer
@@ -716,6 +809,14 @@
 		&[aria-hidden="true"]
 			opacity: 1
 			visibility: visible
+	.cards-team .card
+		padding: 18px 0 18px 18px
+		height: 360px
+		.text
+			h6
+				font-weight: bold
+			p
+				font-size: 14px
 
 	section.more p
 		font-size: 18px
@@ -769,6 +870,11 @@
 		h6
 			font-size: 16px
 			line-height: 1.25
+	.cards-media .card .image
+		width: 110px
+		height: auto
+	.cards-history .card
+		margin-top: 12px
 
 	section.request .wrapper
 		padding: 48px 18px
@@ -778,7 +884,11 @@
 			justify-content: center
 	section.some_events > .all
 		margin-left: 5% !important
-
+	section.reviews .text .names .slide
+		.name
+			font-size: 20px
+		.link
+			font-size: 18px
 
 
 

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="Rectangle_203" d="M0 0H24V24H0z" class="cls-1" transform="translate(395 734)"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#d02029}
+        </style>
+    </defs>
+    <g id="Mask_Group_55" clip-path="url(#clip-path)" transform="translate(-395 -734)">
+        <path id="icons8-google_photos" d="M12.7 1.548v5.225H8.076l-6.528 7.62h5.225v4.62l7.62 6.532v-5.226h4.623l6.532-7.62h-5.229V8.076zm1.693 3.678l4.233 3.628V12.7h-1.865a3.319 3.319 0 0 0-2.368-2.368zm-5.54 3.24H12.7v1.865a3.313 3.313 0 0 0-2.368 2.369H5.225zm4.693 3.387a1.681 1.681 0 0 1 1.693 1.69v.02a1.686 1.686 0 0 1-1.69 1.677h-.02a1.693 1.693 0 0 1 .017-3.387zm-5.08 2.54h1.865a3.313 3.313 0 0 0 2.369 2.368v5.106l-4.234-3.628zm8.294 0h5.106l-3.628 4.233h-3.845v-1.865a3.319 3.319 0 0 0 2.368-2.368z" class="cls-1" transform="translate(393.452 732.454)"/>
+    </g>
+</svg>

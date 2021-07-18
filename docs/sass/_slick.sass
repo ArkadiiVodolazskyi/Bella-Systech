@@ -90,7 +90,7 @@
 				transform: translate(-22px, -100%)
 			&:hover svg path
 				stroke: $aqua
-	&[data-type=hs3], &[data-type=hs4]
+	&[data-type=hs3], &[data-type=hs4], &[data-type=hs7]
 		& ~ .slider_controls
 			display: flex
 			align-items: center
@@ -148,7 +148,9 @@
 				transform: translate(0, calc( 100% + 48px )) rotate(-90deg)
 			&:hover svg path
 				stroke: $aqua
-
+	&[data-type=hs7]
+		.slick-slide
+			display: inline-block
 
 
 
