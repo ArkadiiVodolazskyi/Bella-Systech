@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
             arrows: true,
             dots: false,
             draggable: false,
-            touchThreshold: 300,
             vertical: false,
             verticalSwiping: false,
           },
@@ -111,14 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             dots: false,
             draggable: true,
-            touchThreshold: 300
+            touchThreshold: 300,
+            variableWidth: true
           },
         },
       ],
@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
       verticalSwiping: false,
       slidesToShow: 1,
       slidesToScroll: 1,
+      speed: 300,
       appendDots: $(".slick-dots-wrapper:not(.second)"),
       prevArrow: $(".slick-prev:not(.second)"),
       nextArrow: $(".slick-next:not(.second)")
@@ -274,7 +275,26 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesToScroll: 1,
       appendDots: $(".slick-dots-wrapper.hs7"),
       prevArrow: $(".slick-prev.hs7"),
-      nextArrow: $(".slick-next.hs7")
+      nextArrow: $(".slick-next.hs7"),
+      asNavFor: $('.toSlick[data-type=hs8]')
+    },
+    'hs8': {
+      arrows: true,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: true,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      appendDots: $(".slick-dots-wrapper.hs8"),
+      prevArrow: $(".slick-prev.hs8"),
+      nextArrow: $(".slick-next.hs8"),
+      asNavFor: $('.toSlick[data-type=hs7]')
     },
   }
 
@@ -305,6 +325,7 @@ window.addEventListener("load", () => {
 
   // Globals
   const overlay = document.querySelector('#overlay');
+  const overlay_mobile = document.querySelector('#overlay_mobile');
 
   // Masked Inputs
   (function() {
@@ -374,11 +395,11 @@ window.addEventListener("load", () => {
     const hambMenu = document.getElementById('mobileMenu');
     if (hambButton && hambMenu) {
       hambButton.addEventListener('click', () => {
-        overlay.classList.toggle('active');
+        overlay_mobile.classList.toggle('active');
         hambMenu.classList.toggle('active');
         hambButton.classList.toggle('active');
-        overlay.addEventListener('click', () => {
-          overlay.classList.remove('active');
+        overlay_mobile.addEventListener('click', () => {
+          overlay_mobile.classList.remove('active');
           hambMenu.classList.remove('active');
           hambButton.classList.remove('active');
         }, true);
@@ -403,6 +424,33 @@ window.addEventListener("load", () => {
           }
         });
       }
+    }
+  })();
+
+  // open-connect
+  (function() {
+    const modalConnect = document.getElementById('modal-connect');
+    const openConnects = document.querySelectorAll('.open-connect');
+    const closeConnect = document.getElementById('close-connect');
+
+    if (openConnects.length) {
+      openConnects.forEach(openConnect => {
+        openConnect.addEventListener('click', () => {
+          overlay.classList.add('active');
+          modalConnect.classList.add('active');
+          overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            modalConnect.classList.remove('active');
+          }, true);
+        }, true);
+      });
+    }
+    if (closeConnect) {
+      closeConnect.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.remove('active');
+        modalConnect.classList.remove('active');
+      }, true);
     }
   })();
 

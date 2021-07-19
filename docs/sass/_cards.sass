@@ -2,7 +2,7 @@
 	display: flex
 	&-equipment
 		flex-direction: row
-		@media (min-width: 1024px)
+		@media (min-width: 1025px)
 			&:hover .card
 				opacity: 0.3
 		.card
@@ -23,7 +23,7 @@
 				background-color: #f7f7f7
 			&:nth-of-type(6)
 				background-color: lighten($aqua, 40%)
-			@media (min-width: 1024px)
+			@media (min-width: 1025px)
 				&:hover
 					width: 25%
 					opacity: 1
@@ -50,7 +50,7 @@
 				right: 0
 				-webkit-backdrop-filter: blur(20.2px)
 				backdrop-filter: blur(20.2px)
-				background-color: $w
+				background-color: rgba($w, 0.8)
 				padding: 36px 24px
 				width: 284px
 				max-width: 100%
@@ -155,7 +155,7 @@
 			.text
 				width: 100%
 				position: relative
-				background-color: $w
+				background-color: rgba($w, 0.7)
 				backdrop-filter: blur(20.2px)
 				padding: 24px
 				h6
@@ -202,6 +202,7 @@
 	&-blurred
 		display: block
 		width: 100%
+		margin: 0 -40px
 		.card
 			width: 25%
 			height: 600px
@@ -211,7 +212,9 @@
 			justify-content: flex-end
 			align-items: flex-end
 			padding: 48px 0
-			margin: 0 48px
+			margin: 0 40px
+			&:hover .text h5
+				color: $aqua
 			.image
 				width: 100%
 				height: 100%
@@ -230,12 +233,14 @@
 					left: 50%
 					transform: translate(-50%, -50%)
 			.text
-				width: calc( 100% - 48px )
+				width: calc( 100% - 28px )
 				position: relative
 				backdrop-filter: blur(20.2px)
 				padding: 36px 30px
 				transform: translateX(28px)
-				color: $w
+				h5
+					transition: all 0.2s linear
+					color: $w
 	&-categories
 		display: flex
 		justify-content: space-between
@@ -273,11 +278,14 @@
 					max-width: 500px
 				.button
 					margin-top: 24px
+					box-shadow: 0 12px 18px 0 rgba($red, 0.18)
 	&-popular
 		gap: 48px 24px
 		flex-wrap: wrap
 		.card
 			width: calc( 100% / 5 - 24px )
+			&:hover h6
+				color: $aqua
 			.image
 				margin: 0 auto
 				height: 360px
@@ -297,6 +305,7 @@
 				h6
 					font-size: 18px
 					padding: 12px 0
+					transition: all 0.2s linear
 				strong
 					display: inline-block
 					color: $red
@@ -320,7 +329,7 @@
 				bottom: 48px
 				max-width: 504px
 				padding: 36px 24px
-				background-color: rgba($w, 0.2)
+				background-color: rgba($w, 0.8)
 				-webkit-backdrop-filter: blur(20.2px)
 				backdrop-filter: blur(20.2px)
 				a
@@ -424,12 +433,19 @@
 					img
 						transform: rotate(180deg)
 	&-equipment_lines
-		.card .equip_img
-			height: 100%
-			width: auto
-			left: 50%
-			top: 50%
-			transform: translate(-45%, -50%)
+		.card
+			> a
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+			.equip_img
+				height: 100%
+				width: auto
+				left: 50%
+				top: 50%
+				transform: translate(-45%, -50%)
 	&-schedule
 		gap: 24px
 		flex-wrap: wrap
@@ -489,6 +505,7 @@
 					margin-top: 12px
 					font-size: 24px
 					font-weight: bold
+					opacity: 0.7
 				.manage
 					margin-top: 12px
 					@include flex
@@ -527,13 +544,18 @@
 					margin-top: 12px
 	&-teachers
 		@extend .cards-popular
-		.card .image img
-			width: auto
-			height: auto
-			max-width: unset
-			max-height: unset
-			min-width: 100%
-			min-height: 100%
+		.card
+			.image img
+				width: auto
+				height: auto
+				max-width: unset
+				max-height: unset
+				min-width: 100%
+				min-height: 100%
+			.name
+				line-height: 1.17
+			p
+				margin-top: 12px
 	&-team
 		@extend .cards-service
 		.card

@@ -139,6 +139,7 @@
 		width: calc( 100% / 3 )
 		height: 460px
 	.cards-blurred
+		margin: 0 -24px
 		.card
 			margin: 0 24px
 	.cards-equipment-all .card
@@ -388,7 +389,7 @@
 			height: auto
 			> .wrapper
 				flex-direction: column-reverse
-				padding: 0 0 36px 0
+				padding: 36px 0
 				.image
 					width: 100%
 					max-width: 450px
@@ -409,10 +410,14 @@
 		padding: 72px
 		.request_img
 			display: none
+		h3
+			text-align: center
+			> br
+				display: none
 		.text
 			max-width: unset
 		form
-			margin-top: 36px
+			margin: 36px auto 0
 	section.howwork .wrapper
 		flex-direction: column
 		h2
@@ -467,6 +472,8 @@
 					display: block
 			.right
 				width: 100%
+				border-top: 10px solid #f4f5e5
+				padding-top: 18px
 				.name
 					display: none
 				.manage
@@ -538,6 +545,8 @@
 		font-size: 20px
 	p.p-1
 		font-size: 18px
+	.mb-144
+		margin-bottom: 72px
 
 	button:not(.slick-arrow), .button:not(.slick-arrow), input[type="button"]:not(.slick-arrow), input[type="submit"]:not(.slick-arrow)
 		font-size: 20px
@@ -546,26 +555,30 @@
 		.slick-arrow
 			top: unset
 			bottom: 48px
+			right: 9px
 			&.slick-prev
 				transform: translate(calc(-100% - 9px), 0) rotate(-90deg)
 			&.slick-next
 				transform: translate(0, 0) rotate(-90deg)
 
+	.cards-service .card img
+		width: 110%
 	.cards-pro2 .card
 		padding: 36px 24px
 		img
 			width: 48px
 	.cards-brands
-		margin: 0
+		margin: 0 -12px
 		width: 100%
 		.card
-			margin: 0
-			width: 45vw !important
+			margin: 0 12px
+			width: 36vw !important
 			max-width: unset
 	.cards-blurred
+		margin: 0
 		.card
-			min-width: 240px
-			margin: 0 48px
+			width: 360px !important
+			margin: 0 30px
 			&.slick-slide[aria-hidden="true"]
 				opacity: 1
 				visibility: visible
@@ -585,6 +598,8 @@
 			flex-shrink: 0
 			.image
 				height: 300px
+			.text h6
+				word-wrap: anywhere
 	.cards-lines .card
 		width: 100%
 		max-width: 480px
@@ -602,7 +617,7 @@
 			padding: 0
 			overflow: visible
 			&:not(:first-child)
-				margin-top: 100px
+				margin-top: 72px
 			.equip_img
 				transform: translate(-50%, -50%)
 			.text
@@ -624,12 +639,14 @@
 
 	.breadcrumbs .wrapper
 		justify-content: flex-start
+		a
+			font-size: 14px
 
 	body
-		padding-top: 110px
+		padding-top: 122px
 	header
 		height: 110px
-	#mobileMenu, #overlay
+	#mobileMenu, #overlay_mobile
 		top: 122px
 
 	footer .contacts > div
@@ -640,30 +657,34 @@
 		.messengers
 			margin-top: 18px
 
+	section.page_header
+		margin-top: 48px
 	section.homeBanner
 		.slide
 			width: 100%
 			display: inline-block
-		.wrapper
-			.image
-				&::before
-					width: 251px
-					height: 207px
-					top: 80%
-					left: 30%
-					padding-bottom: 0
-				&::after
-					width: 190px
-					height: 190px
-					right: -30px
-					top: unset
-					left: unset
-					bottom: -100px
-					padding-bottom: 0
-			.text
-				width: 100%
-				p
-					margin-top: 18px
+			> .wrapper
+				.image
+					&::before
+						width: 251px
+						height: 207px
+						top: 80%
+						left: 30%
+						padding-bottom: 0
+					&::after
+						width: 190px
+						height: 190px
+						right: -30px
+						top: unset
+						left: unset
+						bottom: -100px
+						padding-bottom: 0
+				.text
+					width: 100%
+					p
+						margin-top: 18px
+	section.equipment
+		margin-top: 36px
 	section.request .wrapper
 		padding: 48px
 		form input
@@ -675,6 +696,17 @@
 			width: 24px
 	section.pros
 		padding: 0
+	section.brands
+		padding: 48px 0
+	section.partners
+		padding-bottom: 0
+	section.all_equipment
+		margin-top: 36px
+		.wrapper
+			width: 100%
+			h2
+				width: 90%
+				margin: 0 auto 36px auto
 	section.categories
 		margin-top: 36px
 	section.dealer .wrapper .left
@@ -686,6 +718,7 @@
 		padding: 48px 18px
 	section.all_lines
 		padding-bottom: 72px
+		overflow: hidden
 	section.obucheniyeBanner .slide > .wrapper
 		flex-direction: column
 		padding-top: 0
@@ -703,12 +736,12 @@
 			width: 100%
 			position: relative
 			&::before
-				height: 100px
+				height: 70px
 				width: 110%
 				left: -5%
 				top: 0
 				bottom: unset
-				background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))
+				background-image: linear-gradient(to top, $cream, rgba($cream, 0.9), rgba($cream, 0.6), rgba($cream, 0))
 				transform: translateY(-100%)
 			.manage
 				margin-top: 24px
@@ -728,8 +761,13 @@
 		margin-bottom: 72px
 	section.intro
 		margin-top: 18px !important
+	section.teachers .wrapper > h2
+		margin-bottom: 36px
 
 @media (max-width: 700px)
+	#modal-connect
+		width: 100%
+
 	footer
 		.wrapper
 			grid-template-columns: 100%
@@ -747,11 +785,14 @@
 				opacity: 0
 				visibility: hidden
 				margin-top: 0
-			&.active ul
-				max-height: 500px
-				opacity: 1
-				visibility: visible
-				margin-top: 18px
+			&.active
+				ul
+					max-height: 500px
+					opacity: 1
+					visibility: visible
+					margin-top: 18px
+				h5 img
+					transform: rotate(180deg)
 			h5
 				font-size: 20px
 				cursor: pointer
@@ -760,6 +801,7 @@
 					color: $aqua
 				img
 					display: inline-flex
+					transition: all 0.2s linear
 		.contacts
 			margin-top: 48px
 			> div
@@ -777,7 +819,7 @@
 	.cards-equipment-all .card
 		width: 100%
 		.text
-			max-width: 312px
+			width: 100%
 
 @media (max-width: 600px)
 	h6
@@ -827,6 +869,15 @@
 
 	.cards-service .card
 		height: 280px
+	.cards-blurred .card
+		width: 240px !important
+		height: 360px
+		padding: 36px 0
+		margin: 0 15px
+		.text
+			width: 100%
+			transform: translate(12px)
+			padding: 24px 18px
 	.cards-categories .card
 		height: 235px
 		.text
@@ -841,13 +892,13 @@
 				font-weight: normal
 			strong
 				font-size: 20px
-	.cards-lines, .cards-equipment_lines
+	.cards-lines
 		margin: 0 -5%
 	.cards-schedule .card
 		height: 480px
 		padding: 24px 0 24px 48px
 		.text
-			padding: 24px
+			padding: 24px 18px 24px 24px
 			.date
 				font-size: 24px
 			.time
@@ -860,7 +911,6 @@
 				padding: 18px 24px
 	.cards-some_events
 		display: block
-		margin: 0 -6%
 	.cards-news .card .image
 		height: 280px
 	.cards-teachers .card .text
@@ -870,9 +920,12 @@
 		h6
 			font-size: 16px
 			line-height: 1.25
+		p
+			font-size: 16px
+			line-height: 1.22
 	.cards-media .card .image
 		width: 110px
-		height: auto
+		height: 232px
 	.cards-history .card
 		margin-top: 12px
 
@@ -880,10 +933,15 @@
 		padding: 48px 18px
 	section.schedule
 		margin: 36px 0 72px
+		.wrapper
+			width: 100%
 		h2
 			justify-content: center
+	section.obucheniyeBanner
+		margin-bottom: 72px
 	section.some_events > .all
 		margin-left: 5% !important
+		padding: 18px 24px
 	section.reviews .text .names .slide
 		.name
 			font-size: 20px

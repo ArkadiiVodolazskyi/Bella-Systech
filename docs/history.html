@@ -10,17 +10,43 @@
 	<title>История</title>
 </head>
 <body>
-	<div id="overlay"></div>
+	<div id="overlay">
+		<form id="modal-connect">
+			<h4>Записаться на тест-драйв</h4>
+			<input type="text" placeholder="Имя и фамилия">
+			<input type="tel" placeholder="Номер телефона">
+			<button type="submit" class="filled">Отправить заявку</button>
+			<button id="close-connect">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g transform="translate(-18 -24)">
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(20.181 23.999) rotate(45)"/>
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(17.999 45.818) rotate(-45)"/>
+					</g>
+				</svg>
+			</button>
+		</form>
+	</div>
+	<div id="overlay_mobile"></div>
 
 	<header>
 		<div class="top">
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -31,7 +57,7 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
@@ -52,7 +78,7 @@
 				</ul>
 			</div>
 
-			<button id="signup" class="filled">Записаться <span>на тест-драйв</span></button>
+			<button id="signup" class="filled open-connect">Записаться <span>на тест-драйв</span></button>
 		</div>
 		<div class="bottom">
 			<div class="wrapper">
@@ -84,7 +110,7 @@
 			</div>
 		</div>
 
-		<button id="signupMobile" class="filled">
+		<button id="signupMobile" class="filled open-connect">
 			Записаться на тест-драйв
 		</button>
 	</header>
@@ -95,10 +121,20 @@
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -109,7 +145,7 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
@@ -299,7 +335,7 @@
 					</li>
 				</ul>
 				<div>
-					<button class="filled">Написать нам</button>
+					<button class="filled open-connect">Написать нам</button>
 					<ul class="messengers">
 						<li><a href="https://www.facebook.com/bellasystech.ua/">
 							<img src="./img/ico_facebook.svg" alt="">

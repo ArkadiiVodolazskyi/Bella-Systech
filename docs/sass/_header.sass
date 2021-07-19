@@ -1,4 +1,23 @@
+
 #overlay
+	position: fixed
+	z-index: 500
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	width: 100vw
+	height: 100vh
+	background-color: rgba($b, 0.8)
+	cursor: pointer
+	transition: all 0.2s linear
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+
+#overlay_mobile
 	position: fixed
 	z-index: 150
 	left: 0
@@ -39,6 +58,11 @@ header
 					height: 20px
 					&:not(:first-child)
 						margin-left: 8px
+					a svg
+						transition: all 0.2s linear
+						fill: $lgrey
+					a:hover svg
+						fill: $aqua
 			.phones
 				@include flex
 				margin-left: 12px
@@ -58,10 +82,13 @@ header
 					color: darken($aqua, 20%)
 		nav ul
 			@include flex
-			li a
-				padding: 20px 15px
-				font-size: 20px
-				line-height: 1.2
+			li
+				a
+					padding: 20px 15px
+					font-size: 20px
+					line-height: 1.2
+				&.current a
+					color: $aqua
 		.languages
 			@include flex
 			position: relative
@@ -77,9 +104,8 @@ header
 				line-height: 1.22
 				padding-left: 36px
 			> ul
-				width: 30px
 				left: unset
-				right: -14px
+				right: -12px
 				background-color: rgba($dark, 0.95)
 				li
 					text-align: center
@@ -172,6 +198,11 @@ header
 				height: 20px
 				&:not(:first-child)
 					margin-left: 8px
+				a svg
+					transition: all 0.2s linear
+					fill: $lgrey
+				a:hover svg
+					fill: $aqua
 		button
 			width: 100%
 		.phones
@@ -206,6 +237,8 @@ header
 				a
 					font-size: 20px
 					line-height: 1.2
+				&.current a
+					color: $aqua
 	.languages
 		@include flex
 		width: max-content

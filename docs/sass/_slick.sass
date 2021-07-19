@@ -85,9 +85,9 @@
 				opacity: 0.3
 				pointer-events: none
 			&.slick-prev
-				transform: translate(calc( -22px - 100%  ), -100%)
+				transform: translate(calc( -12px - 100%  ), -100%)
 			&.slick-next
-				transform: translate(-22px, -100%)
+				transform: translate(-12px, -100%)
 			&:hover svg path
 				stroke: $aqua
 	&[data-type=hs3], &[data-type=hs4], &[data-type=hs7]
@@ -129,10 +129,13 @@
 				&:hover svg path
 					stroke: $aqua
 	&[data-type=hs5]
+		.slick-slide[aria-hidden=true]
+			opacity: 1
+			visibility: visible
 		.slick-arrow
 			width: 30px
 			height: 30px
-			right: 5%
+			right: 18px
 			margin: 0
 			bottom: 0
 			transition: all 0.2s linear
@@ -143,9 +146,9 @@
 				opacity: 0.3
 				pointer-events: none
 			&.slick-prev
-				transform: translate(calc(-100% - 24px), calc( 100% + 48px )) rotate(-90deg)
+				transform: translate(calc(-100% - 12px), calc( 100% + 40px )) rotate(-90deg)
 			&.slick-next
-				transform: translate(0, calc( 100% + 48px )) rotate(-90deg)
+				transform: translate(0, calc( 100% + 40px )) rotate(-90deg)
 			&:hover svg path
 				stroke: $aqua
 	&[data-type=hs7]

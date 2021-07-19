@@ -11,17 +11,43 @@
 	<link rel="shortcut icon" href="#">
 </head>
 <body>
-	<div id="overlay"></div>
+	<div id="overlay">
+		<form id="modal-connect">
+			<h4>Записаться на тест-драйв</h4>
+			<input type="text" placeholder="Имя и фамилия">
+			<input type="tel" placeholder="Номер телефона">
+			<button type="submit" class="filled">Отправить заявку</button>
+			<button id="close-connect">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g transform="translate(-18 -24)">
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(20.181 23.999) rotate(45)"/>
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(17.999 45.818) rotate(-45)"/>
+					</g>
+				</svg>
+			</button>
+		</form>
+	</div>
+	<div id="overlay_mobile"></div>
 
 	<header>
 		<div class="top">
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -32,12 +58,12 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
 				<ul>
-					<li><a href="./about-us.html">О нас</a></li>
+					<li class="current"><a href="./about-us.html">О нас</a></li>
 					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
 					<li><a href="./kosmetika.html">Косметика</a></li>
 					<li><a href="./kosmetika–tovar.html">Товар</a></li>
@@ -53,7 +79,7 @@
 				</ul>
 			</div>
 
-			<button id="signup" class="filled">Записаться <span>на тест-драйв</span></button>
+			<button id="signup" class="filled open-connect">Записаться <span>на тест-драйв</span></button>
 		</div>
 		<div class="bottom">
 			<div class="wrapper">
@@ -85,7 +111,7 @@
 			</div>
 		</div>
 
-		<button id="signupMobile" class="filled">
+		<button id="signupMobile" class="filled open-connect">
 			Записаться на тест-драйв
 		</button>
 	</header>
@@ -96,10 +122,20 @@
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -110,12 +146,12 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
 				<ul>
-					<li><a href="./about-us.html">О нас</a></li>
+					<li class="current"><a href="./about-us.html">О нас</a></li>
 					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
 					<li><a href="./kosmetika.html">Косметика</a></li>
 					<li><a href="./kosmetika–tovar.html">Товар</a></li>
@@ -149,11 +185,21 @@
 					</p>
 					<div class="manage">
 						<a href="#">
-							<img src="./img/ico_certificate.svg" alt="ico_certificate">
+							<!-- <img src="./img/ico_certificate.svg" alt="ico_certificate"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<g transform="translate(-180 -734)">
+										<path id="icons8-certificate" d="M14.769 2.769a2.837 2.837 0 0 0-1.644.548L11.6 4.385l-1.76.231h-.032l-.029.029A3.133 3.133 0 0 0 7.413 7.01l-.029.029v.029l-.23 1.788-1.067 1.384-.029.029v.031a3.02 3.02 0 0 0 .029 3.346l1.1 1.529.288 1.587L4.5 21.288 3.548 22.7h4.414l1.067 2.481.663 1.587.952-1.442 2.913-4.385a3.044 3.044 0 0 0 2.423 0l2.913 4.385.952 1.442.663-1.587 1.069-2.481h4.413l-.952-1.413-2.884-4.387.231-1.731 1.067-1.529.029-.029v-.029a2.972 2.972 0 0 0-.029-3.317L22.385 8.74l-.347-1.73h.029c0-.022-.025-.036-.029-.058A2.72 2.72 0 0 0 19.7 4.615h-.029l-1.731-.231-1.527-1.067a2.837 2.837 0 0 0-1.644-.548zm0 1.875a1.028 1.028 0 0 1 .577.173L16.99 6l.2.144.231.029 2.019.288h.029a.818.818 0 0 1 .75.75v.058l.381 2.048.029.2.144.173 1.183 1.644a1.172 1.172 0 0 1-.029 1.269l-1.3 1.817-.029.231-.288 2.019v.03a.918.918 0 0 1-.144.4l-.058.029v.029a.813.813 0 0 1-.548.288h-.06l-2.106.375-.231.029-.173.15-1.644 1.183a1.222 1.222 0 0 1-1.3-.029L12.548 18l-.173-.144-.26-.029-2.015-.289h-.029a.817.817 0 0 1-.635-.4.914.914 0 0 1-.115-.346v-.058l-.375-2.106-.029-.231-.144-.173-1.186-1.647a1.222 1.222 0 0 1 .029-1.3l1.154-1.5.144-.173.029-.26.257-1.931c0-.014.025-.014.029-.029a1.287 1.287 0 0 1 .923-.923c.014 0 .014-.025.029-.029l1.933-.26.231-.029.2-.144 1.644-1.183a1.028 1.028 0 0 1 .58-.172zm6.375 14.048l1.413 2.163h-2.22l-.231.577-.635 1.468-1.962-3 .433-.317 1.817-.317v.034c.022 0 .036-.025.058-.029a2.742 2.742 0 0 0 1.327-.579zm-12.75.029a2.631 2.631 0 0 0 1.442.663h.029l1.76.231.4.317-1.958 2.968-.635-1.471-.232-.573H6.981z" transform="translate(177.23 731.23)"/>
+								</g>
+							</svg>
 							Сертификаты
 						</a>
 						<a href="#">
-							<img src="./img/ico_wing.svg" alt="ico_wing">
+							<!-- <img src="./img/ico_wing.svg" alt="ico_wing"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<g transform="translate(-395 -734)">
+										<path id="icons8-google_photos" d="M12.7 1.548v5.225H8.076l-6.528 7.62h5.225v4.62l7.62 6.532v-5.226h4.623l6.532-7.62h-5.229V8.076zm1.693 3.678l4.233 3.628V12.7h-1.865a3.319 3.319 0 0 0-2.368-2.368zm-5.54 3.24H12.7v1.865a3.313 3.313 0 0 0-2.368 2.369H5.225zm4.693 3.387a1.681 1.681 0 0 1 1.693 1.69v.02a1.686 1.686 0 0 1-1.69 1.677h-.02a1.693 1.693 0 0 1 .017-3.387zm-5.08 2.54h1.865a3.313 3.313 0 0 0 2.369 2.368v5.106l-4.234-3.628zm8.294 0h5.106l-3.628 4.233h-3.845v-1.865a3.319 3.319 0 0 0 2.368-2.368z" transform="translate(393.452 732.454)"/>
+								</g>
+							</svg>
 							История компании
 						</a>
 					</div>
@@ -174,14 +220,40 @@
 						<h4 class="name">Ольга Иванова, Oxford-Med, Киев</h4>
 						<a href="#" class="link">
 							oxford-med.kiev.ua
-							<img src="./img/ico_external.svg" alt="ico_external">
+							<!-- <img src="./img/ico_external.svg" alt="ico_external"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+								<path d="M15.636 5v1.636h4.551L10.139 16.685l1.176 1.176L21.364 7.813v4.551H23V5zM5 8.273V23h14.727V12.364L18.091 14v7.364H6.636V9.909H14l1.636-1.636z" transform="translate(-5 -5)"/>
+							</svg>
 						</a>
 					</div>
 					<div class="slide">
 						<h4 class="name">Ольга Иванова, Oxford-Med, Киев</h4>
 						<a href="#" class="link">
 							oxford-med.kiev.ua
-							<img src="./img/ico_external.svg" alt="ico_external">
+							<!-- <img src="./img/ico_external.svg" alt="ico_external"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+								<path d="M15.636 5v1.636h4.551L10.139 16.685l1.176 1.176L21.364 7.813v4.551H23V5zM5 8.273V23h14.727V12.364L18.091 14v7.364H6.636V9.909H14l1.636-1.636z" transform="translate(-5 -5)"/>
+							</svg>
+						</a>
+					</div>
+					<div class="slide">
+						<h4 class="name">Ольга Иванова, Oxford-Med, Киев</h4>
+						<a href="#" class="link">
+							oxford-med.kiev.ua
+							<!-- <img src="./img/ico_external.svg" alt="ico_external"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+								<path d="M15.636 5v1.636h4.551L10.139 16.685l1.176 1.176L21.364 7.813v4.551H23V5zM5 8.273V23h14.727V12.364L18.091 14v7.364H6.636V9.909H14l1.636-1.636z" transform="translate(-5 -5)"/>
+							</svg>
+						</a>
+					</div>
+					<div class="slide">
+						<h4 class="name">Ольга Иванова, Oxford-Med, Киев</h4>
+						<a href="#" class="link">
+							oxford-med.kiev.ua
+							<!-- <img src="./img/ico_external.svg" alt="ico_external"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+								<path d="M15.636 5v1.636h4.551L10.139 16.685l1.176 1.176L21.364 7.813v4.551H23V5zM5 8.273V23h14.727V12.364L18.091 14v7.364H6.636V9.909H14l1.636-1.636z" transform="translate(-5 -5)"/>
+							</svg>
 						</a>
 					</div>
 				</div>
@@ -196,7 +268,15 @@
 				</div>
 			</div>
 			<div class="videos">
-				<div class="videos_slides toSlick" data-type="hs7" data-mobile="false">
+				<div class="videos_slides toSlick" data-type="hs8" data-mobile="false">
+					<div class="video">
+						<img src="./img/reviews_slide.png" alt="reviews_slide">
+						<!-- <iframe src="https://www.youtube.com/embed/ewf-8rx9_uQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+					</div>
+					<div class="video">
+						<img src="./img/reviews_slide.png" alt="reviews_slide">
+						<!-- <iframe src="https://www.youtube.com/embed/ewf-8rx9_uQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+					</div>
 					<div class="video">
 						<img src="./img/reviews_slide.png" alt="reviews_slide">
 						<!-- <iframe src="https://www.youtube.com/embed/ewf-8rx9_uQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -208,11 +288,11 @@
 				</div>
 			</div>
 			<div class="slider_controls">
-				<button class="slick-prev hs7">
+				<button class="slick-prev hs8">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0.7 17.1 28.3"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(90)"/></svg>
 				</button>
-				<div class="slick-dots-wrapper hs7"></div>
-				<button class="slick-next hs7">
+				<div class="slick-dots-wrapper hs8"></div>
+				<button class="slick-next hs8">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="11.5 -23.5 17.5 28.5"><path fill="none" stroke="#d02029" stroke-linecap="round" stroke-width="4px" d="M0 0l12 12L24 0" transform="translate(14 2.829) rotate(-90)"/></svg>
 				</button>
 			</div>
@@ -458,7 +538,7 @@
 					</li>
 				</ul>
 				<div>
-					<button class="filled">Написать нам</button>
+					<button class="filled open-connect">Написать нам</button>
 					<ul class="messengers">
 						<li><a href="https://www.facebook.com/bellasystech.ua/">
 							<img src="./img/ico_facebook.svg" alt="">

@@ -12,17 +12,17 @@ section.homeBanner
 			width: 45%
 			position: relative
 			z-index: 5
-			h2
 			p
 				margin-top: 24px
 			.button
 				margin-top: 48px
+				box-shadow: 0 12px 18px 0 rgba($red, 0.18)
 		.image
 			width: 55%
 			position: relative
 			&::before
 				@include aquaEmpty
-				width: 90%
+				width: 60%
 				padding-bottom: 27vw
 				top: 50%
 				left: 0
@@ -30,9 +30,9 @@ section.homeBanner
 			&::after
 				@include pinkFilled
 				z-index: 2
-				width: 90%
-				padding-bottom: 25vw
-				bottom: 0
+				width: 70%
+				height: 480px
+				bottom: -20px
 				left: 100px
 			img
 				position: relative
@@ -58,11 +58,8 @@ section.request
 		background-size: cover
 		background-position: center
 		background-color: $cream
-		.text
-			max-width: 618px
 		.request_img
 			height: 100%
-			max-height: 490px
 			width: auto
 			position: absolute
 			left: 0
@@ -71,6 +68,7 @@ section.request
 		p
 			margin-top: 18px
 		form
+			max-width: 618px
 			position: relative
 			margin-top: 48px
 			display: flex
@@ -83,6 +81,9 @@ section.request
 				border: solid 1px rgba($dark, 0.24)
 				padding: 22px 24px
 				font-size: 18px
+				&::placeholder
+					color: $dark
+					opacity: 1
 			textarea
 				width: 100%
 				height: 120px
@@ -92,21 +93,23 @@ section.request
 				border: solid 1px rgba($dark, 0.24)
 				padding: 22px 24px
 				font-size: 18px
-				font-family: inherit
+				&::placeholder
+					color: $dark
+					opacity: 1
 			button
 				width: 100%
+				box-shadow: 0 12px 18px 0 rgba($red, 0.18)
 
 section.pros
 	padding: 96px 0
-	.wrapper
-		&::before
-			@include pinkFilled
-			z-index: -1
-			left: 50%
-			top: 50%
-			transform: translate(-50%, -50%)
-			width: 53%
-			height: 100%
+	&::before
+		@include pinkFilled
+		z-index: -1
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 53%
+		height: 100%
 
 section.why
 	&::before
@@ -128,6 +131,7 @@ section.why
 section.brands
 	background-color: $cream
 	padding: 96px 0
+	overflow: hidden
 
 section.howwork
 	.wrapper
@@ -174,6 +178,8 @@ section.partners
 		bottom: 0
 		width: 306px
 		height: 525px
+	.cards .slick-list
+		overflow: hidden
 
 section.more
 	background-color: $cream
@@ -359,6 +365,7 @@ section.product_info
 					color: $lgrey2
 			button
 				margin-left: 48px
+				box-shadow: 0 12px 18px 0 rgba($red, 0.18)
 		.text
 			margin-top: 72px
 			p
@@ -402,9 +409,9 @@ section.schedule
 
 section.obucheniyeBanner
 	@extend .homeBanner, .kosmetikaBanner
-	background-color: $w
+	background-color: $cream
 	.slide
-		background-color: $w
+		background-color: $cream
 		color: $dark
 		overflow: hidden
 	.wrapper
@@ -419,7 +426,7 @@ section.obucheniyeBanner
 				left: 0
 				top: 0
 				bottom: 0
-				background-image: linear-gradient(to right, rgba($w, 1), rgba($w, 0.9), rgba($w, 0.8), rgba($w, 0))
+				background-image: linear-gradient(to right, rgba($cream, 1), rgba($cream, 0.9), rgba($cream, 0.8), rgba($cream, 0))
 		.image
 			position: absolute
 			z-index: 0
@@ -445,10 +452,13 @@ section.obucheniyeBanner
 				align-items: center
 				&:hover
 					color: $aqua
-			img
+					svg
+						fill: $aqua
+			img, svg
 				width: 24px
 				height: 24px
 				margin-right: 12px
+				fill: $red
 
 section.about_study
 	@extend .about_histolab
@@ -522,6 +532,7 @@ section.reviews
 		padding-right: 100px
 		.names
 			margin-top: 72px
+			overflow: hidden
 			.slide
 				.name
 					font-weight: 500
@@ -536,9 +547,12 @@ section.reviews
 					width: max-content
 					&:hover
 						color: $aqua
-					img
+						svg
+							fill: $aqua
+					img, svg
 						width: 18px
 						margin-left: 12px
+						fill: $red
 		.slider_controls
 			margin-top: 72px
 			justify-content: flex-start
@@ -548,21 +562,25 @@ section.reviews
 			width: 100%
 			max-width: 100%
 			height: 0
-			padding-bottom: 29vw
+			padding-bottom: 31vw
 			position: relative
-			&::before
-				content: ''
-				position: absolute
-				z-index: 10
-				width: 100%
-				height: 100%
-				left: 0
-				top: 0
-				background-color: rgba($dark, 0.2)
+			// &::before
+			// 	content: ''
+			// 	position: absolute
+			// 	z-index: 10
+			// 	width: 100%
+			// 	height: 100%
+			// 	left: 0
+			// 	top: 0
+			// 	background-color: rgba($dark, 0.2)
 			&::after
 				left: 50% !important
 				bottom: 50% !important
 				transform: translate(-50%, 50%) !important
+			// Avoid flashing
+			&[aria-hidden=true]
+				opacity: 1
+				visibility: visible
 			iframe, img
 				position: absolute
 				width: 100%

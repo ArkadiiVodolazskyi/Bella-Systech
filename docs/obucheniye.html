@@ -10,17 +10,43 @@
 	<title>Обучение</title>
 </head>
 <body>
-	<div id="overlay"></div>
+	<div id="overlay">
+		<form id="modal-connect">
+			<h4>Записаться на тест-драйв</h4>
+			<input type="text" placeholder="Имя и фамилия">
+			<input type="tel" placeholder="Номер телефона">
+			<button type="submit" class="filled">Отправить заявку</button>
+			<button id="close-connect">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g transform="translate(-18 -24)">
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(20.181 23.999) rotate(45)"/>
+						<path d="M29.312 0a1.543 1.543 0 1 1 0 3.085H1.543a1.543 1.543 0 1 1 0-3.085z" transform="translate(17.999 45.818) rotate(-45)"/>
+					</g>
+				</svg>
+			</button>
+		</form>
+	</div>
+	<div id="overlay_mobile"></div>
 
 	<header>
 		<div class="top">
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -31,7 +57,7 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
@@ -40,7 +66,7 @@
 					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
 					<li><a href="./kosmetika.html">Косметика</a></li>
 					<li><a href="./kosmetika–tovar.html">Товар</a></li>
-					<li><a href="./obucheniye.html">Обучение</a></li>
+					<li class="current"><a href="./obucheniye.html">Обучение</a></li>
 					<li><a href="./raspisanie.html">Расписание</a></li>
 				</ul>
 			</nav>
@@ -52,7 +78,7 @@
 				</ul>
 			</div>
 
-			<button id="signup" class="filled">Записаться <span>на тест-драйв</span></button>
+			<button id="signup" class="filled open-connect">Записаться <span>на тест-драйв</span></button>
 		</div>
 		<div class="bottom">
 			<div class="wrapper">
@@ -84,7 +110,7 @@
 			</div>
 		</div>
 
-		<button id="signupMobile" class="filled">
+		<button id="signupMobile" class="filled open-connect">
 			Записаться на тест-драйв
 		</button>
 	</header>
@@ -95,10 +121,20 @@
 			<div class="header_contacts">
 				<ul class="messengers">
 					<li><a href="https://wa.me/0443344862">
-						<img src="./img/ico_whatsapp.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_whatsapp.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1427 -39)">
+								<path d="M15.3 4.33A8.923 8.923 0 0 0 1.266 15.094L0 19.714l4.729-1.242a8.892 8.892 0 0 0 4.263 1.085H9a9.005 9.005 0 0 0 9-8.92 8.955 8.955 0 0 0-2.7-6.307zM9 18.055a7.4 7.4 0 0 1-3.777-1.033l-.269-.161-2.8.735.747-2.736-.177-.281a7.428 7.428 0 1 1 13.777-3.942A7.5 7.5 0 0 1 9 18.055zm4.062-5.555c-.221-.113-1.318-.651-1.523-.723s-.354-.112-.5.112-.575.723-.707.876-.261.169-.482.056a6.067 6.067 0 0 1-3.033-2.652c-.229-.394.229-.366.655-1.217a.413.413 0 0 0-.02-.39c-.056-.113-.5-1.209-.687-1.655s-.366-.374-.5-.382-.277-.008-.426-.008a.826.826 0 0 0-.595.277 2.5 2.5 0 0 0-.779 1.86 4.366 4.366 0 0 0 .908 2.306 9.959 9.959 0 0 0 3.804 3.37 4.361 4.361 0 0 0 2.676.558 2.283 2.283 0 0 0 1.5-1.061 1.864 1.864 0 0 0 .129-1.061c-.05-.099-.199-.155-.42-.266z" transform="translate(1427 37.286)"/>
+							</g>
+					</svg>
 					</a></li>
 					<li><a href="https://t.me/TheSouthernCity">
-						<img src="./img/ico_telegramGrey.svg" alt="ico_messenger">
+						<!-- <img src="./img/ico_telegramGrey.svg" alt="ico_messenger"> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<g transform="translate(-1397 -39)">
+								<path d="M9,.387a9,9,0,1,0,9,9A9,9,0,0,0,9,.387Zm4.42,6.166-1.477,6.96c-.109.494-.4.613-.813.381L8.88,12.236,7.8,13.281a.568.568,0,0,1-.454.221l.16-2.29,4.17-3.767c.181-.16-.04-.25-.279-.091L6.238,10.6,4.017,9.906c-.483-.152-.494-.483.1-.715L12.8,5.845C13.2,5.7,13.551,5.943,13.42,6.553Z" transform="translate(1397 38.613)"/>
+							</g>
+						</svg>
 					</a></li>
 				</ul>
 				<div class="phones hover_expand_inner">
@@ -109,7 +145,7 @@
 						<li><a href="tel:0443344862">044 334 4862</a></li>
 					</ul>
 				</div>
-				<button>Заказать звонок</button>
+				<button class="open-connect">Заказать звонок</button>
 			</div>
 
 			<nav>
@@ -118,7 +154,7 @@
 					<li><a href="./oborudovanie–inner.html">Оборудование</a></li>
 					<li><a href="./kosmetika.html">Косметика</a></li>
 					<li><a href="./kosmetika–tovar.html">Товар</a></li>
-					<li><a href="./obucheniye.html">Обучение</a></li>
+					<li class="current"><a href="./obucheniye.html">Обучение</a></li>
 					<li><a href="./raspisanie.html">Расписание</a></li>
 				</ul>
 			</nav>
@@ -148,11 +184,24 @@
 					</p>
 					<div class="manage">
 						<a href="#">
-							<img src="./img/ico_video.svg" alt="ico_video">
+							<!-- <img src="./img/ico_video.svg" alt="ico_video"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<g transform="translate(-180 -606)">
+									<g transform="translate(180 606)">
+										<path id="Path_69" d="M21 1.5H3a3 3 0 0 0-3 3v15a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3v-15a3 3 0 0 0-3-3zm1 18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1h20v1zm0-3H2v-12a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1z" />
+										<path id="Path_70" d="M15.981 8.877l-5.89-3.6a1 1 0 0 0-1.521.853v7.2a1 1 0 0 0 1.521.853l5.89-3.6a1 1 0 0 0 0-1.706zm-5.411 2.67V7.913l2.973 1.817z"/>
+									</g>
+								</g>
+							</svg>
 							Обучающие видео
 						</a>
 						<a href="#">
-							<img src="./img/ico_news.svg" alt="ico_news">
+							<!-- <img src="./img/ico_news.svg" alt="ico_news"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<g transform="translate(-433 -606)">
+									<path d="M18.375 24H5.625A5.631 5.631 0 0 1 0 18.375V12.75a4.679 4.679 0 0 1 3.7-4.594V5.625A5.631 5.631 0 0 1 9.328 0h9.047A5.631 5.631 0 0 1 24 5.625v12.75A5.631 5.631 0 0 1 18.375 24zM3.7 10.1a2.776 2.776 0 0 0-1.824 2.65v5.625a3.754 3.754 0 0 0 3.75 3.75h12.75a3.754 3.754 0 0 0 3.75-3.75V5.625a3.754 3.754 0 0 0-3.75-3.75H9.328a3.754 3.754 0 0 0-3.75 3.75v12.937a.937.937 0 0 1-1.875 0zm16.55-4.053a.937.937 0 0 0-.937-.937H8.391a.937.937 0 0 0 0 1.875h10.922a.937.937 0 0 0 .937-.938zm.047 8.765a.937.937 0 0 0-.937-.937H15.7a.937.937 0 0 0 0 1.875h3.656a.937.937 0 0 0 .944-.938zm-7.359 0a.937.937 0 0 0-.938-.937H8.391a.937.937 0 0 0 0 1.875H12a.937.937 0 0 0 .938-.938zm0 3.75a.937.937 0 0 0-.938-.937H8.391a.937.937 0 0 0 0 1.875H12a.937.937 0 0 0 .938-.938zm5.437 0a.937.937 0 0 0-.937-.937H15.7a.937.937 0 0 0 0 1.875h1.734a.937.937 0 0 0 .941-.938zM19.359 12h-6.8a.937.937 0 0 1 0-1.875h6.8a.937.937 0 0 1 0 1.875zM7.454 10.969A1.172 1.172 0 1 0 8.625 9.8a1.172 1.172 0 0 0-1.171 1.169z" transform="translate(433 606)"/>
+								</g>
+							</svg>
 							Свежие новости
 						</a>
 					</div>
@@ -337,7 +386,7 @@
 					</div>
 					<div class="text">
 						<strong class="name">Boncheol Leo Goo</strong>
-						<h6>Директор медицинского центра, Lutronic Corporation,</h6>
+						<p class="p-5">Директор медицинского центра, Lutronic Corporation,</p>
 					</div>
 				</div>
 				<div class="card">
@@ -346,7 +395,7 @@
 					</div>
 					<div class="text">
 						<strong class="name">Jay Jiyoung Lim</strong>
-						<h6>Международный сертифицированный тренер Lutronic corporation</h6>
+						<p class="p-5">Международный сертифицированный тренер Lutronic corporation</p>
 					</div>
 				</div>
 				<div class="card">
@@ -355,7 +404,7 @@
 					</div>
 					<div class="text">
 						<strong class="name">Гончаренко Яна Михайловна</strong>
-						<h6>Врач-дерматовенеролог, международный сертифицированный тренер Lutronic corporation и Classys HQ</h6>
+						<p class="p-5">Врач-дерматовенеролог, международный сертифицированный тренер Lutronic corporation и Classys HQ</p>
 					</div>
 				</div>
 				<div class="card">
@@ -364,7 +413,7 @@
 					</div>
 					<div class="text">
 						<strong class="name">Костенко Алексей Леонидович</strong>
-						<h6>Международный эксперт по лазерным технологиям, косметологии, сертифицированный тренер Lutronic corporation и Classys HQ</h6>
+						<p class="p-5">Международный эксперт по лазерным технологиям, косметологии, сертифицированный тренер Lutronic corporation и Classys HQ</p>
 					</div>
 				</div>
 				<div class="card">
@@ -373,7 +422,7 @@
 					</div>
 					<div class="text">
 						<strong class="name">Савицкая Елена Александровна</strong>
-						<h6>Врач-дерматовенеролог, высшей категории, врач-трихолог, международный сертифицированный тренер Lutronic corporation и Classys HQ</h6>
+						<p class="p-5">Врач-дерматовенеролог, высшей категории, врач-трихолог, международный сертифицированный тренер Lutronic corporation и Classys HQ</p>
 					</div>
 				</div>
 			</div>
@@ -383,7 +432,8 @@
 	<section class="about_study">
 		<div class="wrapper">
 			<div class="text">
-				<h2>Как проходит обучение</h2>
+				<h2>Как проходит<br>
+					 обучение</h2>
 				<p class="p-3">Обучение проводится сертифицированными врачами – дерматовенерологами и пластическими хирургами, которые постоянно совершенствуют свой профессиональный и преподавательский уровень в тренинговых центрах и клиниках наших производителей.</p>
 				<p class="p-3">Очень важно, что наши врачи – тренеры являются ведущими специалистами в своих клиниках, где они ежедневно используют в своей практике оборудование компаний Lutronic corporation и Classys HQ. Наш подход к обучению клиентов – это ответственный партнерский подход.</p>
 			</div>
@@ -415,9 +465,9 @@
 		</div>
 	</section>
 
-	<section class="request">
+	<section class="request mb-144">
 		<div class="wrapper" style="background-image: url(./img/request_bg.png);">
-			<img class="request_img" src="./img/request_2.png" alt="request_img" style="transform: translate(-200px, -40%);">
+			<img class="request_img" src="./img/request_2.png" alt="request_img" style="transform: translate(-270px, -40%);">
 			<div class="text">
 				<h3>Напишите нам</h4>
 					<p class="p-4">Отправьте заявку, и наши консультанты с радостью помогут вам и ответят на все вопросы</p>
@@ -516,7 +566,7 @@
 					</li>
 				</ul>
 				<div>
-					<button class="filled">Написать нам</button>
+					<button class="filled open-connect">Написать нам</button>
 					<ul class="messengers">
 						<li><a href="https://www.facebook.com/bellasystech.ua/">
 							<img src="./img/ico_facebook.svg" alt="">
@@ -548,4 +598,4 @@
 	<script src="./js/libs/jquery.maskedinput.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
-</html>>
+</html>

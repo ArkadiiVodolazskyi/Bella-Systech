@@ -11,7 +11,8 @@ $lpink:		#f5e5e5
 $aqua:		#49bfc6
 $laqua:		#e5f1f5
 $lgrey:		#7d8d8d
-$lgrey2:		#8e9292
+$lgrey2:	#8e9292
+$lgrey3:	#a7b2b2
 
 // ---------------------------------------------------------------- Reset styles
 html, body, div, span, applet, object, iframe,
@@ -118,6 +119,9 @@ p
 	&.p-5, &.p-6
 		font-size: 18px
 		line-height: 1.33
+
+.mb-144
+	margin-bottom: 144px
 
 button,
 .button,
@@ -256,7 +260,7 @@ section
 		@include flex
 		margin-bottom: 48px
 section, .wrapper
-	> .button, > button
+	> .all
 		display: none
 		width: max-content
 		margin: 24px auto 0
@@ -267,7 +271,7 @@ section, .wrapper
 	position: relative
 	z-index: 5
 
-#overlay
+#overlay_mobile
 	position: fixed
 	z-index: 1000
 	left: 0
@@ -286,19 +290,20 @@ section, .wrapper
 		visibility: visible
 
 .breadcrumbs
+	margin-top: 18px
 	.wrapper
 		display: flex
 		align-items: center
 		justify-content: center
-		padding: 18px 0
 		overflow-x: auto
 		scrollbar-width: none
 		&::-webkit-scrollbar
 			display: none
 		a
-			color: $lgrey
+			color: $lgrey3
 			font-size: 18px
 			line-height: 1.22
+			font-weight: normal
 			&:hover
 				color: $aqua
 			&:not(:first-child)
