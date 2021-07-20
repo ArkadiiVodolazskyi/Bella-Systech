@@ -3,6 +3,8 @@ footer
 	background-color: $dark
 	color: $w
 	padding: 96px 0
+	position: relative
+	overflow: hidden
 	a:hover
 		color: $aqua
 	.wrapper
@@ -86,3 +88,37 @@ footer
 				img
 					width: 36px
 					height: 36px
+	.footer_figure
+		position: absolute
+		svg
+			max-width: unset
+			overflow: visible
+		&.footer_lines
+			top: -60px
+			left: -200px
+			svg
+				width: 900px
+				transform: scale(1.5)
+		&.footer_cloud_1
+			bottom: 50px
+			right: 0
+			transform: translate(-356px, 0)
+			svg
+				width: 680px
+		&.footer_cloud_2
+			bottom: -30px
+			right: 0
+			transform: scale(-1,1) translate(60px, 0)
+			svg
+				width: 725px
+
+
+
+
+
+
+
+
+
+
+

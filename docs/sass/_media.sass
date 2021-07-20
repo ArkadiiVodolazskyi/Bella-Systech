@@ -204,10 +204,11 @@
 				button
 					margin: 0 0 18px 0
 
-	section.request .wrapper
-		width: 80%
+	section.request
+		.wrapper
+			width: 80%
 		.request_img
-			transform: translate(-200px, -50%)
+			left: 3%
 	section.why .wrapper
 		flex-direction: column
 		h2
@@ -404,20 +405,21 @@
 						font-size: 20px
 			.breadcrumbs .wrapper
 				padding: 0
-	section.request .wrapper
-		width: 100%
-		margin: 0 auto
-		padding: 72px
+	section.request
 		.request_img
 			display: none
-		h3
-			text-align: center
-			> br
-				display: none
-		.text
-			max-width: unset
-		form
-			margin: 36px auto 0
+		.wrapper
+			width: 100%
+			margin: 0 auto
+			padding: 72px
+			h3
+				text-align: center
+				> br
+					display: none
+			.text
+				max-width: unset
+			form
+				margin: 36px auto 0
 	section.howwork .wrapper
 		flex-direction: column
 		h2
@@ -582,6 +584,8 @@
 			&.slick-slide[aria-hidden="true"]
 				opacity: 1
 				visibility: visible
+			&:before
+				display: none
 	.cards-categories
 		flex-wrap: wrap
 		.card
@@ -751,7 +755,7 @@
 	section.reviews .text .slider_controls
 		margin-top: 24px
 	section.team .wrapper
-		&::before, &::after
+		.figure
 			display: none
 		h2
 			margin-bottom: 36px

@@ -5,6 +5,8 @@ section.homeBanner
 	background-color: $cream
 	.slide
 		height: 720px
+		// &:first-of-type .image .figure
+		// 	opacity: 0
 	.wrapper
 		@include flex
 		height: 100%
@@ -20,20 +22,27 @@ section.homeBanner
 		.image
 			width: 55%
 			position: relative
-			&::before
-				@include aquaEmpty
-				width: 60%
-				padding-bottom: 27vw
-				top: 50%
-				left: 0
-				transform: translate(0, -50%)
-			&::after
-				@include pinkFilled
-				z-index: 2
-				width: 70%
-				height: 480px
-				bottom: -20px
-				left: 100px
+			.figure
+				&.aquaEmpty
+					@include aquaEmpty
+					width: 50%
+					padding-bottom: 27vw
+					top: 0
+					bottom: 0
+					max-height: 388px
+					left: 0
+					margin: auto 0
+					// animation: bannerFigure1 0.5s forwards linear
+					// transform: translate(-30%, -30%)
+				&.pinkFilled
+					@include pinkFilled
+					z-index: 2
+					width: 70%
+					height: 480px
+					bottom: -20px
+					left: 100px
+					// animation: bannerFigure2 0.5s 0.2s forwards linear
+					// transform: translate(30%, 30%)
 			img
 				position: relative
 				z-index: 3
@@ -50,6 +59,14 @@ section.request
 		margin-bottom: 144px
 		.wrapper
 			padding: 96px
+	.request_img
+		width: 340px
+		height: 490px
+		min-height: 490px
+		position: absolute
+		left: 30%
+		bottom: 0
+		z-index: 20
 	.wrapper
 		width: 56.25%
 		margin: 0 0 0 auto
@@ -58,13 +75,7 @@ section.request
 		background-size: cover
 		background-position: center
 		background-color: $cream
-		.request_img
-			height: 100%
-			width: auto
-			position: absolute
-			left: 0
-			top: 50%
-			transform: translate(-300px, -50%)
+		overflow: hidden
 		p
 			margin-top: 18px
 		form
@@ -99,26 +110,44 @@ section.request
 			button
 				width: 100%
 				box-shadow: 0 12px 18px 0 rgba($red, 0.18)
+		.request_figure
+			position: absolute
+			z-index: 0
+			svg
+				max-width: unset
+		.footer_lines
+			width: 70%
+			left: 0
+			top: -50px
+			transform: translate(-30%, 0)
+		.footer_cloud_1
+			width: 70%
+			bottom: 50px
+			right: -100px
 
 section.pros
 	padding: 96px 0
-	&::before
+	.figure
 		@include pinkFilled
 		z-index: -1
-		left: 50%
-		top: 50%
-		transform: translate(-50%, -50%)
 		width: 53%
 		height: 100%
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
 
 section.why
-	&::before
+	.figure
 		@include aquaEmpty
-		left: 50%
-		top: 50%
-		transform: translate(-50%, -50%)
 		width: 53%
 		height: 330px
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
 	.wrapper
 		@include flex
 		align-items: flex-start
@@ -171,19 +200,13 @@ section.howwork
 					transform: translate(78px, -50%)
 
 section.partners
-	padding-bottom: 72px
-	&::before
-		@include aquaEmpty
-		left: 96px
-		bottom: 0
-		width: 306px
-		height: 525px
+	padding-bottom: 96px
+	overflow: hidden
 	.cards .slick-list
-		overflow: hidden
 
 section.more
 	background-color: $cream
-	padding: 96px 0
+	padding: 72px 0
 	.wrapper
 		width: 56%
 	p
@@ -592,20 +615,21 @@ section.team
 	.wrapper
 		display: flex
 		align-items: flex-start
-		&::before
-			@include pinkFilled
-			width: 374px
-			height: 616px
-			left: 280px
-			top: 148px
-			z-index: -1
-		&::after
-			@include aquaEmpty
-			width: 576px
-			height: 440px
-			left: -220px
-			top: -72px
-			z-index: 0
+		.figure
+			&.pinkFilled
+				@include pinkFilled
+				width: 374px
+				height: 616px
+				left: 280px
+				top: 148px
+				z-index: -1
+			&.aquaEmpty
+				@include aquaEmpty
+				width: 576px
+				height: 440px
+				left: -220px
+				top: -72px
+				z-index: 0
 		h2
 			width: 50%
 		.text
@@ -614,6 +638,10 @@ section.team
 		margin-top: 48px
 		position: relative
 		z-index: 10
+
+section.why-about
+	.figure
+		animation: fadeIn 3s linear forwards
 
 section.media_about
 	margin-bottom: 144px

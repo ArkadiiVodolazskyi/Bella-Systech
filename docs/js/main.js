@@ -1,26 +1,4 @@
 
-// Init AOS
-AOS.init({
-  // Global settings:
-  disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // was 120 - offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: true, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   // Slicks options
   slickOptions = {
@@ -317,6 +295,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Init AOS
+  AOS.init({
+    // Global settings:
+    disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // was 120 - offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  });
+
+  AOS.refresh();
 });
 
 window.addEventListener("load", () => {
@@ -324,6 +326,7 @@ window.addEventListener("load", () => {
   // ------------ General ------------
 
   // Globals
+  const body = document.body;
   const overlay = document.querySelector('#overlay');
   const overlay_mobile = document.querySelector('#overlay_mobile');
 
@@ -454,8 +457,6 @@ window.addEventListener("load", () => {
     }
   })();
 
-  // ------------ kosmetika ------------
-
   // Change cities
   (function() {
     const cityBtns = document.querySelectorAll('section.dealer .choose_city button');
@@ -504,4 +505,118 @@ window.addEventListener("load", () => {
       }
     }
   })();
+
+  // Hide header .bottom on scroll
+  (function() {
+    const mainHeader = document.getElementById('mainHeader');
+    if (mainHeader) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) {
+          mainHeader.classList.add('minified');
+        } else {
+          mainHeader.classList.remove('minified');
+        }
+      }, true);
+    }
+  })();
+
+  // Home banner figures animation
+  if (window.innerWidth > 768) {
+    $('section.homeBanner .slide').each(function() {
+      $(this).mousemove(function(e){
+        var y = e.pageY / 20;
+        var x = e.pageX / 20;
+        $('section.homeBanner .slide .image .aquaEmpty').css("transform", `translate(${-x}px, ${-y}px)`);
+        $('section.homeBanner .slide .image .pinkFilled').css("transform", `translate(${x}px, ${y}px)`);
+      });
+    });
+  }
+
+  // if (window.innerWidth > 768) {
+  //   (function() {
+  //     // Init
+  //     var container = body,
+  //     inner = document.querySelector("section.homeBanner .slide .image .figure");
+
+  //     // Mouse
+  //     var mouse = {
+  //       _x: 0,
+  //       _y: 0,
+  //       x: 0,
+  //       y: 0,
+  //       updatePosition: function(event) {
+  //         var e = event || window.event;
+  //         this.x = e.clientX - this._x;
+  //         this.y = (e.clientY - this._y) * -1;
+  //       },
+  //       setOrigin: function(e) {
+  //         this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+  //         this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+  //       },
+  //       show: function() {
+  //         return "(" + this.x + ", " + this.y + ")";
+  //       }
+  //     };
+
+  //     // Track the mouse position relative to the center of the container.
+  //     mouse.setOrigin(container);
+
+  //     //----------------------------------------------------
+
+  //     var counter = 0;
+  //     var refreshRate = 10;
+  //     var isTimeToUpdate = function() {
+  //       return counter++ % refreshRate === 0;
+  //     };
+
+  //     //----------------------------------------------------
+
+  //     var onMouseEnterHandler = function(event) {
+  //       update(event);
+  //     };
+
+  //     var onMouseLeaveHandler = function() {
+  //       inner.style = "";
+  //     };
+
+  //     var onMouseMoveHandler = function(event) {
+  //       if (isTimeToUpdate()) {
+  //         update(event);
+  //       }
+  //     };
+
+  //     //----------------------------------------------------
+
+  //     var update = function(event) {
+  //       mouse.updatePosition(event);
+  //       updateTransformStyle(
+  //         (mouse.y / inner.offsetHeight / 2).toFixed(2),
+  //         (mouse.x / inner.offsetWidth / 2).toFixed(2)
+  //       );
+  //     };
+
+  //     var updateTransformStyle = function(x, y) {
+  //       // var style = "rotateX(" + x*40 + "deg) rotateY(" + y*40 + "deg)";
+  //       var style = "translateX(" + x*50 + "px) translateY(" + y*50 + "px)";
+  //       inner.style.transform = style;
+  //       inner.style.webkitTransform = style;
+  //       inner.style.mozTranform = style;
+  //       inner.style.msTransform = style;
+  //       inner.style.oTransform = style;
+  //     };
+
+  //     //--------------------------------------------------------
+
+  //     container.onmousemove = onMouseMoveHandler;
+  //     container.onmouseleave = onMouseLeaveHandler;
+  //     container.onmouseenter = onMouseEnterHandler;
+  //   })();
+  // }
+
+  AOS.refresh();
+  $(".why").on('scroll', function () {
+    AOS.refresh();
+  });
 });
+
+window.addEventListener('load', AOS.refresh);
