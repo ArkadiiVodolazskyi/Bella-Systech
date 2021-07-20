@@ -303,10 +303,6 @@
 				top: 0
 				right: 0
 				bottom: 0
-			.equip_img
-				bottom: unset
-				top: 50%
-				transform: translate(0, -50%)
 		.all
 			display: block
 	.cards-service .card
@@ -669,19 +665,20 @@
 			display: inline-block
 			> .wrapper
 				.image
-					&::before
+					.figure.aquaEmpty
 						width: 251px
 						height: 207px
-						top: 80%
-						left: 30%
+						top: 70%
+						left: 25%
 						padding-bottom: 0
-					&::after
+						border-width: 10px
+					.figure.pinkFilled
 						width: 190px
 						height: 190px
 						right: -30px
 						top: unset
 						left: unset
-						bottom: -100px
+						bottom: -80px
 						padding-bottom: 0
 				.text
 					width: 100%
@@ -873,6 +870,22 @@
 	h3
 		font-size: 24px
 
+	.cards-equipment .card
+		&:nth-of-type(1) .equip_img
+			height: 160%
+			transform: translate(-8%, 35%)
+		&:nth-of-type(2) .equip_img
+			transform: translate(-15%, 10%)
+		&:nth-of-type(3)
+			.equip_logo
+				transform: translate(-40px, -50%)
+			.equip_img
+				height: 150%
+				transform: translate(-20%, 20%)
+		&:nth-of-type(4) .equip_img
+			transform: translate(-20%, 25%)
+		&:nth-of-type(5) .equip_img
+			transform: translate(-5%, 10%)
 	.cards-service .card
 		height: 280px
 	.cards-blurred .card

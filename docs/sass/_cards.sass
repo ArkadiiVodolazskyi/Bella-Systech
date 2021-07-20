@@ -13,14 +13,29 @@
 			transition: all 0.2s linear
 			&:nth-of-type(1)
 				background-color: #e5f1f5
+				.equip_img
+					height: 145%
+					transform: translate(-35%, 35%)
 			&:nth-of-type(2)
 				background-color: #f5e5e5
+				.equip_img
+					height: 180%
+					transform: translate(-25%, 15%)
 			&:nth-of-type(3)
 				background-color: #f4f5e5
+				.equip_img
+					height: 140%
+					transform: translate(-35%, 25%)
 			&:nth-of-type(4)
 				background-color: #fffbe3
+				.equip_img
+					height: 145%
+					transform: translate(-30%, 20%)
 			&:nth-of-type(5)
 				background-color: #f7f7f7
+				.equip_img
+					height: 130%
+					transform: translate(-10%, 23%)
 			&:nth-of-type(6)
 				background-color: lighten($aqua, 40%)
 			@media (min-width: 1025px)
@@ -36,13 +51,11 @@
 				max-height: 90%
 				width: auto
 			.equip_img
-				width: auto
-				height: 130%
 				position: absolute
 				z-index: 5
 				left: 0
 				bottom: 0
-				transform: translate(-30%, 15%)
+				width: auto
 			.text
 				position: absolute
 				z-index: 10

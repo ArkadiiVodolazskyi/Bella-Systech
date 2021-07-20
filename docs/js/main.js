@@ -520,8 +520,10 @@ window.addEventListener("load", () => {
     }
   })();
 
-  // Home banner figures animation
+  // Onmousehover animations
   if (window.innerWidth > 768) {
+
+    // Home banner figures animation
     $('section.homeBanner .slide').each(function() {
       $(this).mousemove(function(e){
         var y = e.pageY / 20;
@@ -530,88 +532,17 @@ window.addEventListener("load", () => {
         $('section.homeBanner .slide .image .pinkFilled').css("transform", `translate(${x}px, ${y}px)`);
       });
     });
+
+    // Request image animation
+    $('section.request').each(function() {
+      $('section.request .wrapper').mousemove(function(e){
+        var x = e.pageX / 15;
+        var y = e.pageY / 40;
+        $('section.request .request_img').css("transform", `translate(${-x + 100}px, ${y}px)`);
+      });
+    });
   }
 
-  // if (window.innerWidth > 768) {
-  //   (function() {
-  //     // Init
-  //     var container = body,
-  //     inner = document.querySelector("section.homeBanner .slide .image .figure");
-
-  //     // Mouse
-  //     var mouse = {
-  //       _x: 0,
-  //       _y: 0,
-  //       x: 0,
-  //       y: 0,
-  //       updatePosition: function(event) {
-  //         var e = event || window.event;
-  //         this.x = e.clientX - this._x;
-  //         this.y = (e.clientY - this._y) * -1;
-  //       },
-  //       setOrigin: function(e) {
-  //         this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-  //         this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-  //       },
-  //       show: function() {
-  //         return "(" + this.x + ", " + this.y + ")";
-  //       }
-  //     };
-
-  //     // Track the mouse position relative to the center of the container.
-  //     mouse.setOrigin(container);
-
-  //     //----------------------------------------------------
-
-  //     var counter = 0;
-  //     var refreshRate = 10;
-  //     var isTimeToUpdate = function() {
-  //       return counter++ % refreshRate === 0;
-  //     };
-
-  //     //----------------------------------------------------
-
-  //     var onMouseEnterHandler = function(event) {
-  //       update(event);
-  //     };
-
-  //     var onMouseLeaveHandler = function() {
-  //       inner.style = "";
-  //     };
-
-  //     var onMouseMoveHandler = function(event) {
-  //       if (isTimeToUpdate()) {
-  //         update(event);
-  //       }
-  //     };
-
-  //     //----------------------------------------------------
-
-  //     var update = function(event) {
-  //       mouse.updatePosition(event);
-  //       updateTransformStyle(
-  //         (mouse.y / inner.offsetHeight / 2).toFixed(2),
-  //         (mouse.x / inner.offsetWidth / 2).toFixed(2)
-  //       );
-  //     };
-
-  //     var updateTransformStyle = function(x, y) {
-  //       // var style = "rotateX(" + x*40 + "deg) rotateY(" + y*40 + "deg)";
-  //       var style = "translateX(" + x*50 + "px) translateY(" + y*50 + "px)";
-  //       inner.style.transform = style;
-  //       inner.style.webkitTransform = style;
-  //       inner.style.mozTranform = style;
-  //       inner.style.msTransform = style;
-  //       inner.style.oTransform = style;
-  //     };
-
-  //     //--------------------------------------------------------
-
-  //     container.onmousemove = onMouseMoveHandler;
-  //     container.onmouseleave = onMouseLeaveHandler;
-  //     container.onmouseenter = onMouseEnterHandler;
-  //   })();
-  // }
 
   AOS.refresh();
   $(".why").on('scroll', function () {
