@@ -274,6 +274,58 @@ document.addEventListener("DOMContentLoaded", () => {
       nextArrow: $(".slick-next.hs8"),
       asNavFor: $('.toSlick[data-type=hs7]')
     },
+    'hs9': {
+      arrows: false,
+      draggable: false,
+      touchThreshold: 300,
+      focusOnSelect: false,
+      infinite: false,
+      autoplay: false,
+      dots: false,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1281,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300,
+            variableWidth: true
+          },
+        },
+        {
+          breakpoint: 901,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300,
+            variableWidth: true
+          },
+        },
+        {
+          breakpoint: 601,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            draggable: true,
+            touchThreshold: 300,
+            variableWidth: true
+          },
+        },
+      ]
+    },
   }
 
   // Init desktops
@@ -459,7 +511,7 @@ window.addEventListener("load", () => {
 
   // Change cities
   (function() {
-    const cityBtns = document.querySelectorAll('section.dealer .choose_city button');
+    const cityBtns = document.querySelectorAll('.choose_city button');
     const cityBlocks = document.querySelectorAll('section.dealer .right .cards');
 
     if(cityBtns.length && cityBlocks.length) {
@@ -542,6 +594,77 @@ window.addEventListener("load", () => {
       });
     });
   }
+
+  // contacts - init cities | init maps
+  (function() {
+    const citiesBtns = document.querySelectorAll('.choose_city button[data-city]');
+    const citiesAddresses = document.querySelectorAll('.contacts .address[data-city]');
+    const citiesMaps = document.querySelectorAll('.map[data-city]');
+
+    if (citiesBtns.length && citiesAddresses.length && citiesMaps.length) {
+
+      const mapCoords = [
+        [50.42972286659074, 30.522952928933808],
+        [50.42972286659074, 30.522952928933808],
+        [50.42972286659074, 30.522952928933808]
+      ];
+
+      for (let i = 0; i < citiesBtns.length; i++) {
+
+        // Init maps
+        const markerIcon = {
+          url: './img/ico_marker.png',
+          scaledSize: new google.maps.Size(68, 68)
+        };
+        const coordinates = {
+          lat: mapCoords[i][0],
+          lng: mapCoords[i][1]
+        };
+        const map = new google.maps.Map(citiesMaps[i], {
+          center: coordinates,
+          zoom: 17,
+          disableDefaultUI: false,
+          scrollwheel: false,
+        });
+        const marker = new google.maps.Marker({
+          position: coordinates,
+          map: map,
+          icon: markerIcon
+        });
+
+        // Change button | addreses | maps
+        citiesBtns[i].addEventListener('click', () => {
+          for (let j = 0; j < citiesBtns.length; j++) {
+            citiesBtns[j].classList.remove('active');
+            citiesAddresses[j].classList.remove('active');
+            citiesMaps[j].classList.remove('active');
+          }
+
+          citiesBtns[i].classList.add('active');
+          citiesAddresses[i].classList.add('active');
+          citiesMaps[i].classList.add('active');
+        }, true);
+
+        // On mobile we are using select
+        const citySelect = document.getElementById('citySelect');
+        if (citySelect) {
+          citySelect.addEventListener('change', () => {
+            for (let j = 0; j < citiesBtns.length; j++) {
+              citiesBtns[j].classList.remove('active');
+              citiesAddresses[j].classList.remove('active');
+              citiesMaps[j].classList.remove('active');
+            }
+            citiesBtns[citySelect.selectedIndex].classList.add('active');
+            citiesAddresses[citySelect.selectedIndex].classList.add('active');
+            citiesMaps[citySelect.selectedIndex].classList.add('active');
+          }, true);
+        }
+
+      }
+    }
+  })();
+
+  // single-videos - change custom button
 
 
   AOS.refresh();

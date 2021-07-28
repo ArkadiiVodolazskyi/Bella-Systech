@@ -559,6 +559,8 @@
 	&-news
 		gap: 24px
 		justify-content: space-between
+		h6
+			transition: all 0.2s linear
 		.card
 			width: calc( 100% / 4 )
 			display: inline-block
@@ -699,5 +701,39 @@
 					order: 2
 					padding-left: 36px
 					text-align: left
+	&-gallery
+		flex-wrap: wrap
+		gap: 6px
+		.card
+			width: calc( 100%/3 - 6px )
+			height: 290px
+			overflow: hidden
+			position: relative
+			img
+				height: 100%
+				width: auto
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+	&-videos
+		@extend .cards-news
+		flex-wrap: wrap
+		justify-content: flex-start
+		.card
+			width: calc( 100% / 4 - 18px)
+			&:hover
+				color: $aqua
+		.text
+			display: flex
+			align-items: flex-start
+			gap: 24px
+			img
+				flex-shrink: 0
+				width: auto
+			h6
+				margin-top: 0 !important
+
+
 
 

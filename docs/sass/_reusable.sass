@@ -84,9 +84,6 @@ svg
 	transition: all 0.2s linear
 	g, path
 		transition: all 0.2s linear
-	&:not(.native)
-		g, path
-			fill: inherit
 
 // ---------------------------------------------------------------- General
 h2
@@ -236,8 +233,6 @@ a
 
 // ---------------------------------------------------------------- Common styles
 html
-	width: 100vw
-	overflow-x: hidden
 	max-width: 100vw
 	scroll-behavior: unset
 	position: relative
@@ -323,3 +318,28 @@ section, .wrapper
 				color: $aqua
 				pointer-events: none
 
+.navigation
+	margin-top: 72px
+	padding: 48px 0
+	background-color: $cream
+	display: flex
+	justify-content: center
+	align-items: center
+
+// lightbox
+// .lightbox
+// 	max-width: 90vw
+// 	max-height: 90vh
+// 	width: 90vw
+// 	height: 90vh
+// 	display: flex
+// 	align-items: center
+// .lb-data .lb-close
+// 	top: -24px
+.lb-nav
+	width: 100vw
+	max-width: 100vw
+	left: 50%
+	transform: translate(-50%, 0)
+	a.lb-prev, a.lb-next
+		opacity: 1

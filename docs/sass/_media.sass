@@ -106,6 +106,9 @@
 		width: calc( 100% / 4 - 24px)
 		&:last-of-type
 			display: none
+	.cards-news .card .text h6, .cards-videos .card .text h6
+		font-size: 21px
+		line-height: 1.1
 
 	section.product_info .right
 		.name, .value
@@ -274,6 +277,26 @@
 		margin-top: 36px !important
 	section.history
 		margin: 36px 0 72px !important
+	section.page_contacts .left
+		padding-right: 0
+		.contacts a
+			font-size: 24px
+			> div
+				button
+					margin-right: 18px
+				.messengers li:not(:first-child)
+					margin-left: 12px
+	section.all_news .cards .card
+		width: calc( 100% / 3 - 24px)
+	section.single_news .wrapper
+		width: 75%
+	section.other_news .cards
+		display: block
+		.card
+			width: 28vw
+			margin: 0 24px
+	section.certificates .cards .card
+		width: calc( 100% / 4 - 24px)
 
 @media (max-width: 1024px)
 	h2, h3
@@ -356,6 +379,11 @@
 						display: none
 					.date
 						display: block
+	.cards-videos
+		display: flex
+		.card
+			width: calc( 100% / 3 - 18px)
+			margin: 0
 
 	header
 		.top
@@ -517,6 +545,35 @@
 			width: 100%
 	section.history .now
 		font-size: 48px
+	section.page_contacts
+		overflow: hidden
+		margin: 36px 0 0
+		.wrapper
+			flex-direction: column
+			align-items: center
+			width: 90%
+			margin: 0 auto
+		.left
+			width: 100%
+		.right
+			width: 100vw
+			height: 600px
+			margin: 72px -5vw 0
+	section.all_news .cards
+		display: flex
+		.card
+			.text
+				margin-top: 12px
+			h6
+				font-size: 20px
+				margin-top: 6px
+	section.single_news .wrapper
+		width: 90%
+	section.other_news .cards
+		display: block
+		.card
+			width: 29vw
+			margin: 0 12px
 
 @media (max-width: 900px)
 	.cards-pros .card
@@ -526,13 +583,19 @@
 
 	section.schedule
 		margin: 48px 0 96px
+	section.other_news .cards .card
+		width: 44vw
+	section.certificates .cards .card
+		width: calc( 100% / 3 - 24px)
 
 @media (max-width: 850px)
 	.cards-blurred .card
 		height: 480px
 		margin: 0
+	section.all_news .cards .card
+		width: calc( 100% / 2 - 24px)
 
-@media (max-width: 767px)
+@media (max-width: 768px)
 	h2, h3
 		font-size: 30px
 	h4
@@ -636,6 +699,8 @@
 		width: 100%
 	.cards-history .card .text
 		padding: 24px 36px
+	.cards-videos .card
+		width: calc( 100% / 2 - 18px)
 
 	.breadcrumbs .wrapper
 		justify-content: flex-start
@@ -764,6 +829,36 @@
 		margin-top: 18px !important
 	section.teachers .wrapper > h2
 		margin-bottom: 36px
+	section.page_contacts .left
+		.choose_city
+			display: none
+		.select_city
+			display: block
+		.contacts
+			> ul li:not(:first-child):not(.address)
+				margin-top: 24px
+			a
+				font-size: 20px
+			> div
+				flex-direction: column
+				align-items: flex-start
+				button
+					margin: 0 0 24px 0
+	section.single_news .wrapper
+		> :not(:first-child)
+			margin-top: 18px
+		h3
+			font-size: 24px
+		h4
+			font-size: 22px
+		p
+			font-size: 18px
+		> ul li
+			font-size: 16px
+			&:not(:first-child)
+				margin-top: 6px
+	section.single_videos
+		margin-bottom: 72px
 
 @media (max-width: 700px)
 	#modal-connect
@@ -860,9 +955,22 @@
 				font-weight: bold
 			p
 				font-size: 14px
+	.cards-gallery .card
+		width: calc( 100%/2 - 6px)
+	.cards-news .card
+		width: 88vw !important
 
 	section.more p
 		font-size: 18px
+	section.single_news
+		margin-top: 36px !important
+		.wrapper
+			.thumbnail, video, iframe
+				max-height: 320px
+	section.other_news
+		padding: 48px 0
+	section.certificates .cards .card
+		width: calc( 100% / 2 - 24px)
 
 @media (max-width: 480px)
 	p > br
@@ -947,6 +1055,14 @@
 		height: 232px
 	.cards-history .card
 		margin-top: 12px
+	.cards-videos
+		gap: 36px
+		.text
+			img
+				width: 36px
+				height: 40px
+			h6
+				font-size: 18px !important
 
 	section.request .wrapper
 		padding: 48px 18px
@@ -969,7 +1085,8 @@
 				font-size: 18px
 		.videos .video
 			height: 210px
-
+	section.certificates .cards .card
+		width: 100%
 
 
 
