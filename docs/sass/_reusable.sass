@@ -320,22 +320,45 @@ section, .wrapper
 
 .navigation
 	margin-top: 72px
-	padding: 48px 0
+	padding: 36px 0
 	background-color: $cream
 	display: flex
 	justify-content: center
 	align-items: center
+	ul.page-numbers
+		display: flex
+		justify-content: center
+		align-items: center
+		li
+			padding: 12px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			&:not(:first-child)
+				margin-left: 12px
+			> .page-numbers
+				font-size: 24px
+				line-height: 1.17
+				font-weight: bold
+				user-select: none
+				&:hover
+					color: $aqua
+					svg
+						fill: $aqua
+				&.current
+					pointer-events: none
+					color: $aqua
+				svg
+					width: 24px
+					height: 18px
+					fill: $dark
+		li:first-of-type > span.current::before
+			content: url(../img/ico_arrowLeft.svg)
+			margin-right: 30px
+		li:last-of-type > span.current::after
+			content: url(../img/ico_arrowRight.svg)
+			margin-left: 30px
 
-// lightbox
-// .lightbox
-// 	max-width: 90vw
-// 	max-height: 90vh
-// 	width: 90vw
-// 	height: 90vh
-// 	display: flex
-// 	align-items: center
-// .lb-data .lb-close
-// 	top: -24px
 .lb-nav
 	width: 100vw
 	max-width: 100vw
@@ -343,3 +366,32 @@ section, .wrapper
 	transform: translate(-50%, 0)
 	a.lb-prev, a.lb-next
 		opacity: 1
+
+.post-password-form
+	> p:last-child
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	label
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 18px 0
+		input
+			margin-left: 18px
+	input[type=password]
+		width: 100%
+		background-color: rgba($w, 0.24)
+		border-radius: 6px
+		border: solid 1px rgba($dark, 0.24)
+		padding: 10px
+		font-size: 18px
+		&::placeholder
+			color: $dark
+			opacity: 1
+	input[type=submit]
+		width: max-content
+		cursor: pointer
+		&:hover
+			background-color: $aqua
